@@ -1,3 +1,5 @@
+
+
 /* Description: Custom JS file */
 
 /* Navigation*/
@@ -15,7 +17,7 @@ function scrollFunction() {
 	if (document.documentElement.scrollTop > 30) {
 		document.getElementById("navbar").classList.add("top-nav-collapse");
 		document.querySelector(".logo-image").classList.add("show-logo-image");
-	} else if ( document.documentElement.scrollTop < 30 ) {
+	} else if (document.documentElement.scrollTop < 30) {
 		document.getElementById("navbar").classList.remove("top-nav-collapse");
 		document.querySelector(".logo-image").classList.remove("show-logo-image");
 	}
@@ -31,7 +33,7 @@ for (let i = 0; i < elements.length; i++) {
 }
 
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
-  	document.querySelector(".offcanvas-collapse").classList.toggle("open");
+	document.querySelector(".offcanvas-collapse").classList.toggle("open");
 });
 
 // Hover on desktop
@@ -41,11 +43,11 @@ function toggleDropdown(e) {
 
 	setTimeout(
 		function () {
-		const shouldOpen = _d.matches(":hover");
-		_m.classList.toggle("show", shouldOpen);
-		_d.classList.toggle("show", shouldOpen);
+			const shouldOpen = _d.matches(":hover");
+			_m.classList.toggle("show", shouldOpen);
+			_d.classList.toggle("show", shouldOpen);
 
-		_d.setAttribute("aria-expanded", shouldOpen);
+			_d.setAttribute("aria-expanded", shouldOpen);
 		},
 		e.type === "mouseleave" ? 300 : 0
 	);
@@ -54,7 +56,7 @@ function toggleDropdown(e) {
 // On hover
 const dropdownCheck = document.querySelector('.dropdown');
 
-if (dropdownCheck !== null) { 
+if (dropdownCheck !== null) {
 	document.querySelector(".dropdown").addEventListener("mouseleave", toggleDropdown);
 	document.querySelector(".dropdown").addEventListener("mouseover", toggleDropdown);
 
@@ -71,7 +73,7 @@ if (dropdownCheck !== null) {
 		}
 	});
 }
-  
+
 
 /* Card Slider - Swiper */
 var cardSlider = new Swiper('.card-slider', {
@@ -90,36 +92,36 @@ var cardSlider = new Swiper('.card-slider', {
 /* Filter - Isotope */
 const gridCheck = document.querySelector('.grid');
 
-if (gridCheck !== null) { 
+if (gridCheck !== null) {
 	// init Isotope
-	var iso = new Isotope( '.grid', {
+	var iso = new Isotope('.grid', {
 		itemSelector: '.element-item',
 		layoutMode: 'fitRows'
 	});
 
 	// bind filter button click
 	var filtersElem = document.querySelector('.filters-button-group');
-	filtersElem.addEventListener( 'click', function( event ) {
+	filtersElem.addEventListener('click', function (event) {
 		// only work with buttons
-		if ( !matchesSelector( event.target, 'button' ) )  {
+		if (!matchesSelector(event.target, 'button')) {
 			return;
 		}
 		var filterValue = event.target.getAttribute('data-filter');
 		// use matching filter function
 		iso.arrange({ filter: filterValue });
 	});
-	
+
 	// change is-checked class on buttons
 	var buttonGroups = document.querySelectorAll('.button-group');
-	for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+	for (var i = 0, len = buttonGroups.length; i < len; i++) {
 		var buttonGroup = buttonGroups[i];
-		radioButtonGroup( buttonGroup );
+		radioButtonGroup(buttonGroup);
 	}
-	
-	function radioButtonGroup( buttonGroup ) {
-		buttonGroup.addEventListener( 'click', function( event ) {
+
+	function radioButtonGroup(buttonGroup) {
+		buttonGroup.addEventListener('click', function (event) {
 			// only work with buttons
-			if ( !matchesSelector( event.target, 'button' ) )  {
+			if (!matchesSelector(event.target, 'button')) {
 				return;
 			}
 			buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
@@ -149,22 +151,46 @@ function topFunction() {
 }
 
 //*******Project details page */
-var slideIndex = 0;
-showSlides();
+// var slideIndex = 0;
+// showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlidesImages");
-  var dots = document.getElementsByClassName("dotchange");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3500); // Change image every 2 seconds
-}
+// function showSlides() {
+// 	var i;
+// 	var slides = document.getElementsByClassName("mySlidesImages");
+// 	var dots = document.getElementsByClassName("dotchange");
+// 	for (i = 0; i < slides.length; i++) {
+// 		slides[i].style.display = "none";
+// 	}
+// 	slideIndex++;
+// 	if (slideIndex > slides.length) { slideIndex = 1 }
+// 	for (i = 0; i < dots.length; i++) {
+// 		dots[i].className = dots[i].className.replace(" active", "");
+// 	}
+// 	slides[slideIndex - 1].style.display = "block";
+// 	dots[slideIndex - 1].className += " active";
+// 	setTimeout(showSlides, 3500); // Change image every 2 seconds
+// }
+$(document).ready(function () {
+	// required elements
+	var imgPopup = $(".img-popup");
+	var imgCont = $(".container__img-holder");
+	var popupImage = $(".img-popup img");
+	var closeBtn = $(".close-btn");
+  
+	// handle events
+	imgCont.on("click", function () {
+	  var img_src = $(this).children("img").attr("src");
+	  imgPopup.children("img").attr("src", img_src);
+	  imgPopup.addClass("opened");
+	});
+  
+	$(imgPopup, closeBtn).on("click", function () {
+	  imgPopup.removeClass("opened");
+	  imgPopup.children("img").attr("src", "");
+	});
+  
+	popupImage.on("click", function (e) {
+	  e.stopPropagation();
+	});
+  });
+  
