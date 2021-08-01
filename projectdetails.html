@@ -185,8 +185,11 @@
     <!-- end of header -->
 
    <!-- Project Details -->
-   <br>
-   <h1 style="text-align:center">Alhayra Project</h1>
+   
+   <div class="project_title">
+    <br>
+   <h1 style="text-align:center" id="projectTitle">Alhayra Project</h1>
+</div>
    <br>
    <div class="projectImages-container">
    
@@ -279,15 +282,13 @@
      <span class="dotchange"></span> 
      <span class="dotchange"></span> 
    </div>
-   <div class="projectdescription">
-       <p>
+   <div id="description" class="projectdescription">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Integer scelerisque fringilla dapibus. Cras varius convallis elit eu semper.
          Aenean auctor orci id libero volutpat ultrices. 
          Pellentesque habitant morbi tristique senectus
           et netus et malesuada fames ac turpis egestas. 
           Donec gravida mattis massa eget consectetur. 
-        </p>
    </div>
    
    <!-- end of projects details-->
@@ -370,6 +371,9 @@
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/projectdetailsfetch.js"></script>
 </body>
 </html>
