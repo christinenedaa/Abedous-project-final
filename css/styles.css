@@ -1266,11 +1266,16 @@ a:hover {
 
 /* Min-width 1200px */
 @media (min-width: 1200px) {
+
+
+	
 	
 	/* General Styles */
 	.container {
 		max-width: 1140px;
 	}
+
+
 	/* end of general styles */
 	
 
