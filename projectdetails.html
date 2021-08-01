@@ -21,6 +21,77 @@
     <title>Abedous-Projects</title>
     
     <!-- Styles -->
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlidesImages {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .projectImages-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Caption text */
+        .projectname {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/12 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dotchange {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fade {
+          from {opacity: .5} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .projectname {font-size: 11px}
+        }
+        </style>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +100,8 @@
 	<link href="css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="images/Abedous(Logo).png"">
+    <link rel="icon" href="images/Abedous(Logo).png">
+    
 </head>
 <body>
     
@@ -113,7 +185,111 @@
     <!-- end of header -->
 
    <!-- Project Details -->
+   <br>
+   <h1 style="text-align:center">Alhayra Project</h1>
+   <br>
+   <div class="projectImages-container">
+   
+   <div class="mySlidesImages">
+     <div class="numbertext">1 / 12</div>
+     <img src="images/alhayra1.jpg" style="width:100%">
+     <div class="projectname">our photos</div>
+   </div>
+   
+   <div class="mySlidesImages">
+     <div class="numbertext">2 / 12</div>
+     <img src="images/alhayra2.jpg" style="width:100%">
+     <div class="projectname">our photos</div>
+   </div>
+   
+   <div class="mySlidesImages">
+     <div class="numbertext">3 / 12</div>
+     <img src="images/alhayra3.jpg" style="width:100%">
+     <div class="projectname">our photos</div>
+   </div>
 
+   <div class="mySlidesImages">
+    <div class="numbertext">4 / 12</div>
+    <img src="images/alhayra4.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">5 / 12</div>
+    <img src="images/alhayra5.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">6 / 12</div>
+    <img src="images/alhayra6.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">7 / 12</div>
+    <img src="images/alhayra7.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">8 / 12</div>
+    <img src="images/alhayra8.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">9 / 12</div>
+    <img src="images/alhayra9.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">10 / 12</div>
+    <img src="images/alhayra10.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">11 / 12</div>
+    <img src="images/alhayra11.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+
+  <div class="mySlidesImages">
+    <div class="numbertext">12 / 12</div>
+    <img src="images/alhayra12.jpg" style="width:100%">
+    <div class="projectname">our photos</div>
+  </div>
+   
+   </div>
+   <br>
+   
+   <div style="text-align:center">
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+     <span class="dotchange"></span> 
+   </div>
+   <div class="projectdescription">
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Integer scelerisque fringilla dapibus. Cras varius convallis elit eu semper.
+         Aenean auctor orci id libero volutpat ultrices. 
+         Pellentesque habitant morbi tristique senectus
+          et netus et malesuada fames ac turpis egestas. 
+          Donec gravida mattis massa eget consectetur. 
+        </p>
+   </div>
+   
    <!-- end of projects details-->
 <br>
 
