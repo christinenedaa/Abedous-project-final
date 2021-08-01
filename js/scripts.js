@@ -14,8 +14,10 @@ window.onload = function () {
 function scrollFunction() {
 	if (document.documentElement.scrollTop > 30) {
 		document.getElementById("navbar").classList.add("top-nav-collapse");
+		document.querySelector(".logo-image").classList.add("show-logo-image");
 	} else if ( document.documentElement.scrollTop < 30 ) {
 		document.getElementById("navbar").classList.remove("top-nav-collapse");
+		document.querySelector(".logo-image").classList.remove("show-logo-image");
 	}
 }
 

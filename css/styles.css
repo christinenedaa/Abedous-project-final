@@ -322,7 +322,7 @@ a:hover {
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
 }
 
-.navbar .navbar-brand {
+.navbar .navbar-brand 	{
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 }
@@ -330,6 +330,12 @@ a:hover {
 .navbar .logo-image img {
     width: 169px;
 	height: 102px;
+}
+.logo-image{
+	opacity: 0;
+}
+.show-logo-image{
+	opacity: 1;
 }
 
 .navbar .logo-text {
@@ -478,7 +484,7 @@ a:hover {
 .header .header-content {
 	padding-top: 11rem;
 	padding-bottom: 9rem;
-	background: linear-gradient(rgba(21, 35, 63, 0.5), rgba(21, 35, 63, 0.5));
+	background-image: url(../images/CoverAbedous1.jpg);
 	background-size: cover;
 	text-align: center; 
 }
@@ -937,13 +943,13 @@ a:hover {
 /*     Extra Pages     */
 /***********************/
 .ex-header {
-	padding-top: 8.5rem;
+	padding-top: 3rem;
 	padding-bottom: 4rem;
-	background-color: #161223;
+	background-color: #e1deec;
 }
 
 .ex-header h1 {
-	color: #ffffff;
+	color: #121212;
 }
 
 .ex-basic-1 .list-unstyled .fas {
@@ -1406,3 +1412,109 @@ a:hover {
 	/* end of extra pages */
 }
 /* end of min-width 1200px */
+
+/**********************/
+/*     Projects page     */
+/**********************/
+body
+{
+  background-color:#eee
+}
+.wrap
+{
+  margin:50px auto 0 auto;
+  width:100%;
+  display:flex;
+  align-items:space-around;
+  max-width:1200px;
+}
+.tile
+{
+  width:380px;
+  height:380px;
+  margin:10px;
+  background-color:#99aeff;
+  display:inline-block;
+  background-size:cover;
+  position:relative;
+  cursor:pointer;
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+  overflow:hidden;
+  color:white;
+  font-family:'Roboto';
+  
+}
+.tile img
+{
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:0;
+  transition: all 0.4s ease-out;
+}
+.tile .text
+{
+/*   z-index:99; */
+  position:absolute;
+  padding:30px;
+  height:calc(100% - 60px);
+}
+.tile h1
+{
+ 
+  font-weight:300;
+  margin:0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.tile h2
+{
+  font-weight:100;
+  margin:20px 0 0 0;
+  font-style:italic;
+   transform: translateX(200px);
+}
+.tile p
+{
+  font-weight:300;
+  margin:20px 0 0 0;
+  line-height: 25px;
+/*   opacity:0; */
+  transform: translateX(-200px);
+  transition-delay: 0.2s;
+}
+.animate-text
+{
+  opacity:0;
+  transition: all 0.6s ease-in-out;
+}
+.tile:hover
+{
+/*   background-color:#99aeff; */
+box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+  transform:scale(1.05);
+}
+.tile:hover img
+{
+  opacity: 0.2;
+}
+.tile:hover .animate-text
+{
+  transform:translateX(0);
+  opacity:1;
+}
+
+.tile:hover span
+{
+  opacity:1;
+  transform:translateY(0px);
+}
+
+@media (max-width: 1000px) {
+  .wrap {
+   flex-direction: column;
+    width:400px;
+  }
+}
