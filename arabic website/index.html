@@ -19,16 +19,7 @@
     <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Abedous-Main</title>
-
-    <style>
-        .trial:hover {
-            transform: translateX(-13px);
-            text-decoration: underline;
-
-
-        }
-    </style>
+    <title>Abedous</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -38,26 +29,27 @@
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/Abedous(Logo).png">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
-        <div class="container">
+    <nav id="navbarLogoo" class="navbarLogo navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+        <div class="container" style="display: flex; justify-content: space-between;">
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/Abedous(Logo).png"
+            <a class="navbar-brand logo-image animate__animated animate__bounce" href="index.html"><img src="images/Abedous(Logo).png"
                     alt="alternative"></a>
 
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
 
-            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+                    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,17 +63,11 @@
                         <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="Services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="aboutus.html">About</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article.html">Article Details</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
-                        </ul> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contactus.html">Contact</a>
@@ -116,51 +102,52 @@
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
-
-
+      
     <!-- Header -->
     <header id="header" class="header">
-        <div class="header-content animate__animated animate__backInDown">
-            <div class="container">
+        <div class=" header-content animate__animated animate__backInDown">
+            <div class="container" style="margin-left: 0%; margin-right: 0%;">
                 <div class="row">
                     <div class="col-lg-12">
+                        <div class="image-container">
+                        </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
         </div> <!-- end of header-content -->
-
+       
 
     </header>
-    <!-- end of header -->
-    <!-- end of header -->
-    <br>
-    <br>
-    <br>
+        <!-- end of header -->
+        <!-- end of header -->
+<br>
+<br>
+<br>
 
     <!-- Introduction -->
-    <div id="projects" class="filter bg-gray">
-        <div class="container">
+	<div id="projects" class="filter bg-gray">
+		<div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading trial">Why Abedous Contracting Co.?</h2>
+                    <h2 class="h2-heading trial animate__animated animate__bounce animate__delay-3s">Why Abedous Contracting Co.?</h2>
                     <p>We recognize that our clients have a choice when picking a
                         construction company. At Abedous Co. LLC, we strive to exceed
                         expectations and maximize value. Abedous Co. LLC commitment is
                         your benefit.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-        </div> <!-- end of container -->
+		</div> <!-- end of container -->
     </div> <!-- end of filter -->
     <!-- end of introduction -->
 
 
     <!-- Services 1 -->
     <div id="services" class="basic-1" style="background-color: #4792a021">
-        <div class="container">
+        <div class="container" style="background-color: #f7f9fd;     border-radius: 1% ">
             <div class="row">
                 <div class="col-lg-7">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/contactus.jpg" alt="alternative">
+                        <img class="img-fluid" style="border-radius: 4%;" src="images/contactus.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-5">
@@ -168,8 +155,8 @@
                         <h2>MISSION</h2>
                         <p>Our mission is to deliver for our customers the best quality of
                             construction services at competitive rates with highest level of
-                            professionalism and integrity resulting in long term relationships with
-                            our employees, customers, suppliers and subcontractors.</p>
+                           professionalism and integrity resulting in long term relationships with
+                           our employees, customers, suppliers and subcontractors.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -180,11 +167,11 @@
 
     <!-- Services 2 -->
     <div class="basic-2" style="background-color: #4792a021">
-        <div class="container">
+        <div class="container" style="background-color: #f7f9fd; border-radius: 1%;">
             <div class="row">
                 <div class="col-lg-7">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/post20.jpg" alt="alternative">
+                        <img class="img-fluid" style="border-radius: 4%;" src="images/post20.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-5">
@@ -192,9 +179,9 @@
                         <h2>VISION</h2>
                         <p>Abedous Co. LLC is committed to building long-term relationships
                             based on integrity Performance, value, and client satisfaction.
-                            We will continue to meet the changing needs our clients with our
+                             We will continue to meet the changing needs our clients with our
                             quality services delivered by the most qualified people.
-                            Our vision is to be recognized and respected as one of the premier
+                             Our vision is to be recognized and respected as one of the premier
                             total facility management companies in UAE.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
@@ -203,18 +190,18 @@
     </div> <!-- end of basic-2 -->
     <!-- end of services 2 -->
 
-    <br>
-    <br>
+<br>
+<br>
+ 
+        <!-- Video Background -->
+        <video style="background-color: #4792a021; border-radius: 3%;" width="100%" autoplay loop muted id="video-background" poster="images/header-background.jpg" playsinline>
+            <source src="images/WhatsApp Video 2021-07-31 at 4.34.09 PM.mp4" type="video/mp4" />
+        </video>
+        <!-- end of video background -->
 
-    <!-- Video Background -->
-    <video style="background-color: #4792a021" width="100%" autoplay loop muted id="video-background" poster="images/header-background.jpg" playsinline>
-        <source src="images/WhatsApp Video 2021-07-31 at 4.34.09 PM.mp4" type="video/mp4" />
-    </video>
-    <!-- end of video background -->
-
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
+        <br>
 
 
     <!-- Footer -->
@@ -224,8 +211,8 @@
                 <div class="col-lg-12">
                     <div class="footer-col first">
                         <h6>About Abedous</h6>
-                        <p class="p-small">Abedous COMPANY, Ajman-UAE.</p>
-                        <p class="p-small">+971-6-7451106.</p>
+                        <p class="p-small">2 Al Nuaimia - Ajman - United Arab Emirates.</p>
+                        <p class="p-small">+971-67312884</p>
                         <p class="p-small">info@abedous.com</p>
                     </div> <!-- end of footer-col -->
                     <div class="footer-col second">
@@ -233,9 +220,7 @@
                         <ul class="list-unstyled li-space-lg p-small">
                             <!-- <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li> -->
                             <!-- <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li> -->
-                            <li>Menu: <a href="index.html">Home</a>, <a href="projects.html">Projects</a>, <a
-                                    href="Services.html">Services</a>, <a href="aboutus.html">About</a>, <a
-                                    href="contactus.html">Contact</a></li>
+                            <li>Menu: <a href="index.html">Home</a>, <a href="projects.html">Projects</a>, <a href="Services.html">Services</a>, <a href="aboutus.html">About</a>, <a href="contactus.html">Contact</a></li>
                         </ul>
                     </div> <!-- end of footer-col -->
                     <div class="footer-col third">
@@ -256,7 +241,7 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of footer -->
+    </div> <!-- end of footer -->  
     <!-- end of footer -->
 
 
@@ -269,16 +254,16 @@
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of copyright -->
+    </div> <!-- end of copyright --> 
     <!-- end of copyright -->
-
+    
 
     <!-- Back To Top Button -->
     <button onclick="topFunction()" id="myBtn">
         <img src="images/up-arrow.png" alt="alternative">
     </button>
     <!-- end of back to top button -->
-
+    	
     <!-- Scripts -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
@@ -286,7 +271,6 @@
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/script2.js"></script> <!-- Custom scripts -->
 </body>
-
 </html>
