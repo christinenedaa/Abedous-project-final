@@ -384,7 +384,7 @@ a:hover {
 .navbar .nav-item.dropdown.show .nav-link,
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-item .nav-link.active {
-	color: #2b7cc2;
+	color: white;
 }
 
 /* Dropdown Menu */
