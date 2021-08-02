@@ -315,7 +315,7 @@ a:hover {
 /*     Navigation     */
 /**********************/
 .navbar {
-	background-color: #161223;
+	background-color: #ffc43ffa;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
@@ -356,7 +356,7 @@ a:hover {
 	padding-left: 1rem;
 	overflow-y: auto;
 	visibility: hidden;
-	background-color: #161223;
+	background-color: #ffc43ffa;
 	transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
 	transition: transform .3s ease-in-out, visibility .3s ease-in-out;
 	transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
