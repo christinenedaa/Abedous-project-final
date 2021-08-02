@@ -6,11 +6,13 @@
 // Collapse the navbar by adding the top-nav-collapse class
 window.onscroll = function () {
 	scrollFunction();
+	scrollLogoFunction();
 	scrollFunctionBTT(); // back to top button
 };
 
 window.onload = function () {
 	scrollFunction();
+	scrollLogoFunction();
 };
 
 function scrollFunction() {
@@ -20,6 +22,15 @@ function scrollFunction() {
 	} else if (document.documentElement.scrollTop < 30) {
 		document.getElementById("navbar").classList.remove("top-nav-collapse");
 		document.querySelector(".logo-image").classList.remove("show-logo-image");
+	}
+}
+function scrollLogoFunction() {
+	if (document.documentElement.scrollTop > 30) {
+		document.getElementById("navbarLogoo").classList.add("top-nav-collapse");
+		document.querySelector(".logo-image").classList.add("show-logo-image");
+	} else if (document.documentElement.scrollTop < 30) {
+		document.getElementById("navbarLogoo").classList.remove("top-nav-collapse");
+		document.querySelector(".logo-image").classList.add("show-logo-image");
 	}
 }
 
