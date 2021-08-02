@@ -467,6 +467,7 @@ a:hover {
 .header {
 	position: relative;
 	direction: rtl;
+
 }
 
 .header #video-background {
@@ -1275,7 +1276,7 @@ a:hover {
 
 	/* Header */
 	.header {
-		height: 100vh;
+		height: 84vh;
 	}
 	
 	.header .header-content {
