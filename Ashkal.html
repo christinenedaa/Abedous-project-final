@@ -22,76 +22,255 @@
     <title>Abedous</title>
 
     <style>
-        * {box-sizing: border-box;}
-        body {font-family: Verdana, sans-serif;}
-        .mySlidesImages {display: none;}
-        img {vertical-align: middle;}
-        
-        /* Slideshow container */
-        .projectImages-container {
-          max-width: 1000px;
-          position: relative;
-          margin: auto;
-        }
-        
-        /* Caption text */
-        .projectname {
-          color: #f2f2f2;
-          font-size: 15px;
-          padding: 8px 12px;
-          position: absolute;
-          bottom: 8px;
-          width: 100%;
-          text-align: center;
-        }
-        
-        /* Number text (1/12 etc) */
-        .numbertext {
-          color: #f2f2f2;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
-        
-        /* The dots/bullets/indicators */
-        .dotchange {
-          height: 15px;
-          width: 15px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-        
-        .dotchange.active {
-          background-color: #717171;
-        }
-        
-        /* Fading animation */
-        .fade {
-          -webkit-animation-name: fade;
-          -webkit-animation-duration: 1.5s;
-          animation-name: fade;
-          animation-duration: 1.5s;
-        }
-        
-        @-webkit-keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-        }
-        
-        @keyframes fade {
-          from {opacity: .5} 
-          to {opacity: 1}
-        }
-        
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-          .projectname {font-size: 11px}
-        }
-        </style> 
+
+
+
+.slider, 
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    background-position: center center;
+    display: block;
+    width: 100%;
+    height: 500px;
+    /* height: 100vh; *//* If you want fullscreen */
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+.slider > div {
+    position: absolute;
+}
+
+.slider > i {
+    color: #5bbd72;
+    position: absolute;
+    font-size: 60px;
+    margin: 20px;
+    top: 40%;
+    text-shadow: 0 10px 2px #223422;
+    transition: .3s;
+    width: 30px;
+    padding: 10px 13px;
+    background: #fff;
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    line-height: 0;
+    box-sizing: content-box;
+    border-radius: 3px;
+    z-index: 4;
+}
+
+.slider > i svg {
+    margin-top: 3px;
+}
+
+.slider > .left {
+    left: -100px;
+}
+.slider > .right {
+    right: -100px;
+}
+.slider:hover > .left {
+    left: 0;
+}
+.slider:hover > .right {
+    right: 0;
+}
+
+.slider > i:hover {
+    background:#fff;
+    background: rgba(255, 255, 255, .8);
+    transform: translateX(-2px);
+}
+
+.slider > i.right:hover {
+    transform: translateX(2px);
+}
+
+.slider > i.right:active,
+.slider > i.left:active {
+    transform: translateY(1px);
+}
+
+.slider:hover > div {
+    transform: scale(1.01);
+}
+
+.hoverZoomOff:hover > div {
+    transform: scale(1);
+}
+
+.slider > ul {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+.slider > ul > li {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    float: left;
+    margin: 10px 10px 0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.slider > ul > .showli {
+    background-color: #7EC03D;
+    -moz-animation: boing .5s forwards;
+    -o-animation: boing .5s forwards;
+    -webkit-animation: boing .5s forwards;
+    animation: boing .5s forwards;
+}
+
+.slider > ul > li:hover {
+    background-color: #7EC03D;
+}
+
+.slider > .show {
+    z-index: 1;
+}
+
+.hideDots > ul {
+    display: none;
+}
+
+.showArrows > .left {
+    left: 0;
+}
+
+.showArrows > .right {
+    right: 0;
+}
+
+.titleBar {
+    z-index: 2;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    padding: 20px 30px;
+    transition: .3s;
+    color: #fff;
+}
+
+.titleBar * {
+    transform: translate(-20px, 30px);
+    transition: all 700ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
+    opacity: 0;
+}
+
+.titleBarTop .titleBar * {
+    transform: translate(-20px, -30px);
+}
+
+.slider:hover .titleBar,
+.slider:hover .titleBar * {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.titleBarTop .titleBar {
+    top: 0;
+    bottom: initial;
+    transform: translateY(-100%);
+}
+
+.slider > div span {
+    display: block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+
+@keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* -------------------------------------- */
+
+#slider2 {
+    max-width: 30%;
+    margin-right: 20px;
+}
+
+.row2Wrap {
+    display: flex;
+}
+
+.content {
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1, h2, h3 {
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 100;
+}
+body {
+    font: 15px 'Titillium Web', Arial, sans-serif;
+    /* background: radial-gradient(#121212, #000); */
+    height: 100%;
+    color: #aaa;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 10px 15vw;
+}
+
+
+
+
+    </style>
+   
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -105,6 +284,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
     <!-- Favicon  -->
     <link rel="icon" href="images/Abedous(Logo).png">
@@ -190,142 +371,57 @@
 
 
 
-    <div class="project_title">
-        <br>
-        <h1 style="text-align:center" id="projectTitle">Ashkal Handsia</h1>
-    </div>
-    <br>
-    <div class="projectImages-container">
-
-        <div class="mySlidesImages">
-            <div class="numbertext">1 / 12</div>
-            <img src="images/alhayra1.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">2 / 12</div>
-            <img src="images/alhayra2.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">3 / 12</div>
-            <img src="images/alhayra3.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">4 / 12</div>
-            <img src="images/alhayra4.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">5 / 12</div>
-            <img src="images/alhayra5.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">6 / 12</div>
-            <img src="images/alhayra6.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">7 / 12</div>
-            <img src="images/alhayra7.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">8 / 12</div>
-            <img src="images/alhayra8.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">9 / 12</div>
-            <img src="images/alhayra9.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">10 / 12</div>
-            <img src="images/alhayra10.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">11 / 12</div>
-            <img src="images/alhayra11.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-        <div class="mySlidesImages">
-            <div class="numbertext">12 / 12</div>
-            <img src="images/alhayra12.jpg" style="width:100%">
-            <div class="projectname">our photos</div>
-        </div>
-
-    </div>
-    <br>
-
-    <div style="text-align:center">
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-        <span class="dotchange"></span>
-    </div>
-    <div id="description" class="projectdescription">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Integer scelerisque fringilla dapibus. Cras varius convallis elit eu semper.
-        Aenean auctor orci id libero volutpat ultrices.
-        Pellentesque habitant morbi tristique senectus
-        et netus et malesuada fames ac turpis egestas.
-        Donec gravida mattis massa eget consectetur.
-    </div>
 
 
 
-    <!-- The Following is a trial before -->
-    <!-- 
-    <div class="lightbox">
-        <div class="row">
-          <div class="col-lg-6">
-            <img
-              src="https://mdbootstrap.com/img/Photos/Thumbnails/Slides/1.jpg"
-              data-mdb-img="https://mdbootstrap.com/img/Photos/Slides/1.jpg"
-              alt="Lightbox image 1"
-              class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
-            />
-            <img
-              src="https://mdbootstrap.com/img/Photos/Thumbnails/Square/1.jpg"
-              data-mdb-img="https://mdbootstrap.com/img/Photos/Square/1.jpg"
-              alt="Lightbox image 2"
-              class="w-100 shadow-1-strong rounded"
-            />
-          </div>
-          <div class="col-lg-6">
-            <img
-              src="https://mdbootstrap.com/img/Photos/Thumbnails/Vertical/1.jpg"
-              data-mdb-img="https://mdbootstrap.com/img/Photos/Vertical/1.jpg"
-              alt="Lightbox image 3"
-              class="w-100 shadow-1-strong rounded"
-            />
-          </div>
-        </div>
-      </div>
- -->
+
+
+<!-- Slider 1 -->
+<div class="slider" id="slider1">
+    <!-- Slides -->
+    <div style="background-image:url(images/alhayra11.jpg)"></div>
+    <div style="background-image:url(images/alhayra9.jpg)"></div>
+    <div style="background-image:url(images/alhayra-project.jpg)"></div>
+    <div style="background-image:url(images/alhayra1.jpg)"></div>
+    <div style="background-image:url(images/alhayra8.jpg)"></div>
+    <!-- The Arrows -->
+    <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
+            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
+        </svg></i>
+    <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
+            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path>
+        </svg></i>
+    <!-- Title Bar -->
+    <span class="titleBar">
+        <h1 style="text-align: center; color: beige;">El Ashkal El Handsia</h1>
+    </span>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div style="text-align: center;">
+
+<h1>
+A breif description about this service
+
+</h1>
+
+<br>
+<br>
+
+<p style="background-color: beige; height: 33%; text-align: center; ">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+</div>
+
+
+<br>
+
 
 
 
@@ -339,8 +435,8 @@
                 <div class="col-lg-12">
                     <div class="footer-col first">
                         <h6>About Abedous</h6>
-                        <p class="p-small">Abedous COMPANY, Ajman-UAE.</p>
-                        <p class="p-small">+971-6-7451106.</p>
+                        <p class="p-small">2 Al Nuaimia - Ajman - United Arab Emirates.</p>
+                        <p class="p-small">+971-67312884</p>
                         <p class="p-small">info@abedous.com</p>
                     </div> <!-- end of footer-col -->
                     <div class="footer-col second">
@@ -402,6 +498,173 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+
+    <script>
+
+
+(function($) {
+  "use strict";
+  $.fn.sliderResponsive = function(settings) {
+    
+    var set = $.extend( 
+      {
+        slidePause: 5000,
+        fadeSpeed: 800,
+        autoPlay: "on",
+        showArrows: "off", 
+        hideDots: "off", 
+        hoverZoom: "on",
+        titleBarTop: "off"
+      },
+      settings
+    ); 
+    
+    var $slider = $(this);
+    var size = $slider.find("> div").length; //number of slides
+    var position = 0; // current position of carousal
+    var sliderIntervalID; // used to clear autoplay
+      
+    // Add a Dot for each slide
+    $slider.append("<ul></ul>");
+    $slider.find("> div").each(function(){
+      $slider.find("> ul").append('<li></li>');
+    });
+      
+    // Put .show on the first Slide
+    $slider.find("div:first-of-type").addClass("show");
+      
+    // Put .showLi on the first dot
+    $slider.find("li:first-of-type").addClass("showli")
+
+     //fadeout all items except .show
+    $slider.find("> div").not(".show").fadeOut();
+    
+    // If Autoplay is set to 'on' than start it
+    if (set.autoPlay === "on") {
+        startSlider(); 
+    } 
+    
+    // If showarrows is set to 'on' then don't hide them
+    if (set.showArrows === "on") {
+        $slider.addClass('showArrows'); 
+    }
+    
+    // If hideDots is set to 'on' then hide them
+    if (set.hideDots === "on") {
+        $slider.addClass('hideDots'); 
+    }
+    
+    // If hoverZoom is set to 'off' then stop it
+    if (set.hoverZoom === "off") {
+        $slider.addClass('hoverZoomOff'); 
+    }
+    
+    // If titleBarTop is set to 'on' then move it up
+    if (set.titleBarTop === "on") {
+        $slider.addClass('titleBarTop'); 
+    }
+
+    // function to start auto play
+    function startSlider() {
+      sliderIntervalID = setInterval(function() {
+        nextSlide();
+      }, set.slidePause);
+    }
+    
+    // on mouseover stop the autoplay
+    $slider.mouseover(function() {
+      if (set.autoPlay === "on") {
+        clearInterval(sliderIntervalID);
+      }
+    });
+      
+    // on mouseout starts the autoplay
+    $slider.mouseout(function() {
+      if (set.autoPlay === "on") {
+        startSlider();
+      }
+    });
+
+    //on right arrow click
+    $slider.find("> .right").click(nextSlide)
+
+    //on left arrow click
+    $slider.find("> .left").click(prevSlide);
+      
+    // Go to next slide
+    function nextSlide() {
+      position = $slider.find(".show").index() + 1;
+      if (position > size - 1) position = 0;
+      changeCarousel(position);
+    }
+    
+    // Go to previous slide
+    function prevSlide() {
+      position = $slider.find(".show").index() - 1;
+      if (position < 0) position = size - 1;
+      changeCarousel(position);
+    }
+
+    //when user clicks slider button
+    $slider.find(" > ul > li").click(function() {
+      position = $(this).index();
+      changeCarousel($(this).index());
+    });
+
+    //this changes the image and button selection
+    function changeCarousel() {
+      $slider.find(".show").removeClass("show").fadeOut();
+      $slider
+        .find("> div")
+        .eq(position)
+        .fadeIn(set.fadeSpeed)
+        .addClass("show");
+      // The Dots
+      $slider.find("> ul").find(".showli").removeClass("showli");
+      $slider.find("> ul > li").eq(position).addClass("showli");
+    }
+
+    return $slider;
+  };
+})(jQuery);
+
+
+ 
+//////////////////////////////////////////////
+// Activate each slider - change options
+//////////////////////////////////////////////
+$(document).ready(function() {
+  
+  $("#slider1").sliderResponsive({
+  // Using default everything
+    // slidePause: 5000,
+    // fadeSpeed: 800,
+    // autoPlay: "on",
+    // showArrows: "off", 
+    // hideDots: "off", 
+    // hoverZoom: "on", 
+    // titleBarTop: "off"
+  });
+  
+  $("#slider2").sliderResponsive({
+    fadeSpeed: 300,
+    autoPlay: "off",
+    showArrows: "on",
+    hideDots: "on"
+  });
+  
+  $("#slider3").sliderResponsive({
+    hoverZoom: "off",
+    hideDots: "on"
+  });
+  
+}); 
+
+
+
+
+    </script>
 </body>
 
 </html>
