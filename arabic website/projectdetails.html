@@ -17,144 +17,151 @@
 	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Webpage Title -->
-    <title>معلومات المشروع</title>
-
-    <!-- Styles -->
-        <style>
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  background: #333;
-  color: #fff;
-  font-size: 18px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}
-
-/* Image gallery stlyling */
-.IMGcontainer {
-  max-width: 900px;
-  margin: 80px auto 0;
-  text-align: center;
-}
-
-.container__img-holder {
-  max-width: 280px;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 20px;
-  margin-left: 16px;
-  cursor: pointer;
-}
-
-.IMGcontainer .container__img-holder:nth-child(3n+1) {
-  margin-left: 0;
-}
-
-.container__img-holder img {
-  width: 100%;
-  height: 220px;
-  display: block;
-}
+    <title>أبيدوس-معلومات</title>
+    
 
 
-/* Popup Styling */
-.img-popup {
-  position:fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(255, 255, 255, .5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
- 
-}
+    
 
-.img-popup img {
-  max-width: 70%;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(-100px);
-  -webkit-transform: translateY(-100px);
-  -moz-transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
-  -o-transform: translateY(-100px);
-  padding-top: 10%;
-}
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+      
+      html, body {
+        width: 100%;
+        height: 100%;
+      }
+      
+      body {
+        background: #333;
+        color: #fff;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+      }
+      
+      /* Image gallery stlyling */
+      .IMGcontainer {
+        max-width: 900px;
+        margin: 80px auto 0;
+        text-align: center;
+      }
+      
+      .container__img-holder {
+        max-width: 280px;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 20px;
+        margin-left: 16px;
+        cursor: pointer;
+      }
+      
+      .IMGcontainer .container__img-holder:nth-child(3n+1) {
+        margin-left: 0;
+      }
+      
+      .container__img-holder img {
+        width: 100%;
+        height: 220px;
+        display: block;
+      }
+      
+      
+      /* Popup Styling */
+      .img-popup {
+        position:fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, .5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+       
+      }
+      
+      .img-popup img {
+        max-width: 70%;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+        -moz-transform: translateY(-100px);
+        -ms-transform: translateY(-100px);
+        -o-transform: translateY(-100px);
+        padding-top: 10%;
+      }
+      
+      .close-btn {
+        width: 35px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 60%;
+        right: 4%;
+        cursor: pointer;
+      }
+      
+      .close-btn .bar {
+        height: 4px;
+        background: #333;
+      }
+      
+      .close-btn .bar:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      
+      .close-btn .bar:nth-child(2) {
+        transform: translateY(-4px) rotate(-45deg);
+      }
+      
+      .opened {
+        display: flex;
+      }
+      
+      .opened img {
+        animation: animatepopup 1s ease-in-out .8s;
+        -webkit-animation: animatepopup .3s ease-in-out forwards;
+      }
+      
+      @keyframes animatepopup {
+      
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+        }
+      
+      }
+      
+      @media screen and (max-width: 880px) {
+      
+        .container .container__img-holder:nth-child(3n+1) {
+          margin-left: 16px;
+        }
+      
+      }
+              </style>
 
-.close-btn {
-  width: 35px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  top: 60%;
-  right: 4%;
-  cursor: pointer;
-}
 
-.close-btn .bar {
-  height: 4px;
-  background: #333;
-}
 
-.close-btn .bar:nth-child(1) {
-  transform: rotate(45deg);
-}
 
-.close-btn .bar:nth-child(2) {
-  transform: translateY(-4px) rotate(-45deg);
-}
 
-.opened {
-  display: flex;
-}
-
-.opened img {
-  animation: animatepopup 1s ease-in-out .8s;
-  -webkit-animation: animatepopup .3s ease-in-out forwards;
-}
-
-@keyframes animatepopup {
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-  }
-
-}
-
-@media screen and (max-width: 880px) {
-
-  .container .container__img-holder:nth-child(3n+1) {
-    margin-left: 16px;
-  }
-
-}
-        </style>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -163,6 +170,8 @@ body {
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -249,6 +258,21 @@ body {
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Project Details -->
 
