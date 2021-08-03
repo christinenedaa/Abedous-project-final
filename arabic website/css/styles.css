@@ -615,7 +615,7 @@ a:hover {
 .header .header-content {
 	padding-top: 11rem;
 	padding-bottom: 9rem;
-	background-image: url(../images/covertrial2.jpg);
+	background-image: url(../images/covernew.jpeg);
 	background-size: cover;
 	text-align: center; 
 }
@@ -1732,3 +1732,36 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 
 	}
+
+
+
+	
+	/* The Wave Animation */
+.wavy {
+	position: relative;
+}
+
+.wavy span {
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	font-size: 2em;
+	text-transform: uppercase;
+	animation: animate 2s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0px);
+	}
+
+	20% {
+		transform: translateY(-20px);
+	}
+
+	40%,
+	100% {
+		transform: translateY(0px);
+	}
+}
