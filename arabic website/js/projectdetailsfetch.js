@@ -11,7 +11,6 @@ axios.get(`/posts/${id}`)
 	const projecttitle = document.querySelector(".project_title");
 	const projectTitleH1 = document.getElementById("projectTitle");
 	projectTitleH1.innerText = title;
-
 	projecttitle.appendChild(projectTitleH1);
 
 	const projectdescription = document.querySelector(".projectdescription");
