@@ -315,7 +315,7 @@ a:hover {
 /*     Navigation     */
 /**********************/
 .navbar {
-	background-color: #4792a0f0;
+	background-color: #64b1bf94;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
@@ -334,7 +334,7 @@ a:hover {
 
 /* //////////////////////////////////////////////////// */
 .navbarLogo {
-	background-color: #4792a0f0;
+	background-color: #64b1bf94;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
@@ -351,7 +351,7 @@ a:hover {
 
 }
 .navbarLogo {
-	background-color: #4792a0f0;
+	background-color: #64b1bf94;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
@@ -400,7 +400,7 @@ a:hover {
 	padding-left: 1rem;
 	overflow-y: auto;
 	visibility: hidden;
-	background-color: #4792a0f0;
+	background-color: #64b1bf94;
 	transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
 	transition: transform .3s ease-in-out, visibility .3s ease-in-out;
 	transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
@@ -1194,7 +1194,7 @@ a:hover {
 
 	/* Navigation */
 	.navbar {
-		padding-top: 0.15rem;
+		padding-top: 1.75rem;
 		background-color: transparent;
 		box-shadow: none;
 		transition: all 0.2s;
@@ -1203,7 +1203,7 @@ a:hover {
 	.navbar.top-nav-collapse {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
-		background-color: #4792a0f0;
+		background-color: #64b1bf94;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
 	}
 	/* ////////////////////////////////////////////////// */
@@ -1217,7 +1217,7 @@ a:hover {
 	.navbarLogo.top-nav-collapse {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
-		background-color: #4792a0f0;
+		background-color: #64b1bf94;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
 	}
 
