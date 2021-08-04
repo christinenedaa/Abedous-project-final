@@ -1074,7 +1074,7 @@ a:hover {
 /*     Extra Pages     */
 /***********************/
 .ex-header {
-	padding-top: 3rem;
+	padding-top: 1.3rem;
 	padding-bottom: 0.7rem;
 	background-color: #7ea7d8b0;
 }
@@ -1194,7 +1194,7 @@ a:hover {
 
 	/* Navigation */
 	.navbar {
-		padding-top: 1.75rem;
+		padding-top: 0.15rem;
 		background-color: transparent;
 		box-shadow: none;
 		transition: all 0.2s;
