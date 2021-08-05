@@ -72,3 +72,27 @@ function addServiceToServicesPage(
 
         wrapDiv.appendChild(servicesdetailsLink);
 }
+
+const servicedata = {
+    serviceid: 1,
+    servicetitle: " Management",
+    servicedescription: " we have a firm focus on providing quality air conditioning and heating solutions for our clients. It’s what they deserve, and it’s why we’re in business. Keeping people cool in the summer and warm in the winter is our No. 1 priority.",
+}
+
+const textcontainer = document.createElement("div");
+textcontainer.classList.add("text-container");
+textcontainer.setAttribute("style","display: flex; flex-direction: column; justify-content: center; align-items: center;")
+
+const h2texttitle = document.createElement("h2");
+h2texttitle.classList.add("animate__animated", "animate__bounce");
+h2texttitle.innerText = servicedata.servicetitle;
+
+const ptext = document.createElement("p");
+ptext.setAttribute("style","width: 42%")
+ptext.innerText = servicedata.servicedescription;
+
+textcontainer.appendChild(h2texttitle);
+textcontainer.appendChild(ptext);
+
+const colclass = document.querySelector(".col-lg-17");
+colclass.appendChild(textcontainer);

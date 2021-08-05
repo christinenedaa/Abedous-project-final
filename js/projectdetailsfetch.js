@@ -90,26 +90,26 @@ function addProjectToProjectPage(
         const ImageContainerDiv = document.querySelector(".IMGcontainer");
         ImageContainerDiv.appendChild(ImagesHolder);
 
-
-
-        const imagetag = document.createElement("img");
-        imagetag.setAttribute("src",img);
-        imagetag.setAttribute("alt","Popup Image");
-
-        const divclose = document.createElement("div");
-        divclose.classList.add("close-btn");
-
-        imagetag.appendChild(divclose);
-
-        const divclosebar = document.createElement("div");
-        divclosebar.classList.add("bar");
-
-        const divclosebar2 = document.createElement("div");
-        divclosebar2.classList.add("bar");
-
-        divclose.appendChild(divclosebar);
-        divclose.appendChild(divclosebar2);
-        
-        const Imagepopup = document.querySelector(".img-popup");
-        Imagepopup.appendChild(imagetag);
 }
+
+const imagetag = document.createElement("img");
+imagetag.setAttribute("src",data.images);
+imagetag.setAttribute("alt","Popup Image");
+imagetag.setAttribute("style","width:60%")
+
+const divclose = document.createElement("div");
+divclose.classList.add("close-btn");
+
+imagetag.appendChild(divclose);
+
+const divclosebar = document.createElement("div");
+divclosebar.classList.add("bar");
+
+const divclosebar2 = document.createElement("div");
+divclosebar2.classList.add("bar");
+
+divclose.appendChild(divclosebar);
+divclose.appendChild(divclosebar2);
+
+const Imagepopup = document.querySelector(".img-popup");
+Imagepopup.appendChild(imagetag);
