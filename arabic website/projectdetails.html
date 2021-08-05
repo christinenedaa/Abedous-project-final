@@ -1,259 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ar">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <!-- SEO Meta Tags -->
     <meta name="description" content="Your description">
     <meta name="author" content="Your name">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-    <meta property="og:site_name" content="" /> <!-- website name -->
-    <meta property="og:site" content="" /> <!-- website link -->
-    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
-    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Webpage Title -->
-    <title>Abedous</title>
-
-    <!-- Styles -->
-        <style>
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  background: #333;
-  color: #fff;
-  font-size: 18px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}
-
-/* Image gallery stlyling */
-.IMGcontainer {
-  max-width: 900px;
-  margin: 80px auto 0;
-  text-align: center;
-}
-
-.container__img-holder {
-  max-width: 280px;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 20px;
-  margin-left: 16px;
-  cursor: pointer;
-}
-
-.IMGcontainer .container__img-holder:nth-child(3n+1) {
-  margin-left: 0;
-}
-
-.container__img-holder img {
-  width: 100%;
-  height: 220px;
-  display: block;
-}
+    <title>أبيدوس-معلومات</title>
+    
 
 
-/* Popup Styling */
-.img-popup {
-  position:fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(255, 255, 255, .5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
- 
-}
+    
 
-.img-popup img {
-  max-width: 70%;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(-100px);
-  -webkit-transform: translateY(-100px);
-  -moz-transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
-  -o-transform: translateY(-100px);
-  padding-top: 10%;
-}
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+      
+      html, body {
+        width: 100%;
+        height: 100%;
+      }
+      
+      body {
+        background: #333;
+        color: #fff;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+      }
+      
+      /* Image gallery stlyling */
+      .IMGcontainer {
+        max-width: 900px;
+        margin: 80px auto 0;
+        text-align: center;
+      }
+      
+      .container__img-holder {
+        max-width: 280px;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 20px;
+        margin-left: 16px;
+        cursor: pointer;
+      }
+      
+      .IMGcontainer .container__img-holder:nth-child(3n+1) {
+        margin-left: 0;
+      }
+      
+      .container__img-holder img {
+        width: 100%;
+        height: 220px;
+        display: block;
+      }
+      
+      
+      /* Popup Styling */
+      .img-popup {
+        position:fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, .5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+       
+      }
+      
+      .img-popup img {
+        max-width: 70%;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+        -moz-transform: translateY(-100px);
+        -ms-transform: translateY(-100px);
+        -o-transform: translateY(-100px);
+        padding-top: 10%;
+      }
+      
+      .close-btn {
+        width: 35px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 60%;
+        right: 4%;
+        cursor: pointer;
+      }
+      
+      .close-btn .bar {
+        height: 4px;
+        background: #333;
+      }
+      
+      .close-btn .bar:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      
+      .close-btn .bar:nth-child(2) {
+        transform: translateY(-4px) rotate(-45deg);
+      }
+      
+      .opened {
+        display: flex;
+      }
+      
+      .opened img {
+        animation: animatepopup 1s ease-in-out .8s;
+        -webkit-animation: animatepopup .3s ease-in-out forwards;
+      }
+      
+      @keyframes animatepopup {
+      
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+        }
+      
+      }
+      
+      @media screen and (max-width: 880px) {
+      
+        .container .container__img-holder:nth-child(3n+1) {
+          margin-left: 16px;
+        }
+      
+      }
+              </style>
 
-.close-btn {
-  width: 35px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  top: 60%;
-  right: 4%;
-  cursor: pointer;
-}
 
-.close-btn .bar {
-  height: 4px;
-  background: #333;
-}
 
-.close-btn .bar:nth-child(1) {
-  transform: rotate(45deg);
-}
 
-.close-btn .bar:nth-child(2) {
-  transform: translateY(-4px) rotate(-45deg);
-}
 
-.opened {
-  display: flex;
-}
-
-.opened img {
-  animation: animatepopup 1s ease-in-out .8s;
-  -webkit-animation: animatepopup .3s ease-in-out forwards;
-}
-
-@keyframes animatepopup {
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-  }
-
-}
-
-@media screen and (max-width: 880px) {
-
-  .container .container__img-holder:nth-child(3n+1) {
-    margin-left: 16px;
-  }
-
-}
-        </style>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-    <!-- Favicon  -->
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/fontawesome-all.min.css" rel="stylesheet">
+<link href="css/swiper.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	
+	<!-- Favicon  -->
     <link rel="icon" href="images/Abedous(Logo).png">
-
 </head>
-
-<body>
-
+<body style="direction: rtl;">
+    
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
-      <div class="container">
+        <div class="container">
 
-          <!-- Image Logo -->
-          <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a>
-          <br>
-          <br>
-          <br>
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a> 
 
-          <button class="navbar-toggler p-3 border-3" type="button" id="navbarSideCollapse"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              <br>
-              <br>
-              <br>
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text" href="index.html">Desi</a> -->
 
-          </button>
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        
-    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav ms-auto navbar-nav-scroll animate__animated animate__heartBeat">
-        <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="index.html">الصفحة الرئيسية</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link " href="aboutus.html">معلومات عنا</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Services.html">خدماتنا</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="projects.html">مشاريعنا</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="contactus.html">تواصل معنا</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                aria-expanded="false">اللغة</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                <li><a class="dropdown-item" href="../aboutus.html">English</a></li>
-                <li>
-                    <div class="dropdown-divider"></div>
-                </li>
-                <li><a class="dropdown-item" href="aboutus.html">عربي</a></li>
-            </ul>
-        </li>
-    </ul>
-      <span class="nav-item social-icons">
-          <span class="fa-stack">
-              <a href="https://api.whatsapp.com/send?phone=+971-67312884">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-whatsapp fa-stack-1x"></i>
-              </a>
-          </span>
-      
-      </span>
-  </div> <!-- end of navbar-collapse -->
-</div> <!-- end of container -->
-</nav> <!-- end of navbar -->
-<!-- end of navigation -->
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto navbar-nav-scroll animate__animated animate__heartBeat">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">المشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">معلومات عنا</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                            <li><a class="dropdown-item" href="article.html">Article Details</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">تواصل معنا</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">اللغة</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                            <li><a class="dropdown-item" href="../projectdetails.html">English</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="projectdetails.html">عربي</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <span class="nav-item social-icons">
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
 
-
-
-
-    <!-- Header -->
-    <header class="ex-header">
+     <!-- Header -->
+     <header class="ex-header">
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h1 class="animate__animated animate__bounce">Projects</h1>
+                    <h1 class="animate__animated animate__bounce">المشاريع</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Project Details -->
 
@@ -267,7 +290,7 @@ body {
 </div>
    <br>
    <div class="IMGcontainer">
-    <div class="container__img-holder">
+    <!-- <div class="container__img-holder">
       <img class="border_radius_size" src="images/alhayra1.jpg" alt="Image">
     </div>
     <div class="container__img-holder">
@@ -302,16 +325,16 @@ body {
       </div>
       <div class="container__img-holder">
         <img class="border_radius_size" src="images/alhayra12.jpg" alt="Image">
-      </div>
+      </div> -->
       
   </div>
   
   <div class="img-popup">
-    <img src="" alt="Popup Image">
+    <!-- <img src="" alt="Popup Image">
     <div class="close-btn">
       <div class="bar"></div>
       <div class="bar"></div>
-    </div>
+    </div> -->
   </div>
 
   <div class="ex-basic-1 pt-3 pb-5">
@@ -334,72 +357,68 @@ body {
 
 
 
-
-
-
-
-
-
-
     
- <!-- Footer -->
- <div class="footer">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-              <div class="footer-col first">
-                  <h6>About Abedous</h6>
-                  <p class="p-small">2 Al Nuaimia - Ajman - United Arab Emirates.</p>
-                  <p class="p-small">+971-67312884</p>
-                  <p class="p-small">info@abedous.com</p>
-              </div> <!-- end of footer-col -->
-              <div class="footer-col second">
-                  <h6>Links</h6>
-                  <ul class="list-unstyled li-space-lg p-small">
-                      <!-- <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li> -->
-                      <!-- <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li> -->
-                      <li>Menu: <a href="index.html">الصفحة الرئيسية</a>, <a href="projects.html">Projects</a>, <a href="Services.html">Services</a>, <a href="aboutus.html">About</a>, <a href="contactus.html">Contact</a></li>
-                  </ul>
-              </div> <!-- end of footer-col -->
-              <div class="footer-col third">
-                  <span class="fa-stack">
-                      <a href="#your-link">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-facebook-f fa-stack-1x"></i>
-                      </a>
-                  </span>
-                  <span class="fa-stack">
-                      <a href="#your-link">
-                          <i class="fas fa-circle fa-stack-2x"></i>
-                          <i class="fab fa-instagram fa-stack-1x"></i>
-                      </a>
-                  </span>
-                  <p class="p-small">We would love to hear from you</p>
-              </div> <!-- end of footer-col -->
-          </div> <!-- end of col -->
-      </div> <!-- end of row -->
-  </div> <!-- end of container -->
+   <!-- Footer -->
+   <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-col first" style="    margin-right: 30px;">
+                    <h6>عن شركتنا</h6>
+                    <p class="p-small">2 النوامية - عمان - الامارات العربية المتحدة</p>
+                    <p class="p-small">+971-67312884</p>
+                    <p class="p-small">info@abedous.com</p>
+                </div> <!-- end of footer-col -->
+                <div class="footer-col second" id="linksmain" style="    margin-left: 130px; margin-right: 50px;">
+                    <h6>الروابط</h6>
+                    <ul class="list-unstyled li-space-lg p-small" style="padding-right: 0%;">
+                        <!-- <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li> -->
+                        <!-- <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li> -->
+                        <li>انتقل الي:  <a href="#header"> الصفحةالرئيسية </a>, <a href="#services"> مشاريع </a>, <a href="#projects"> معلومات عنا </a>, <a href="#contact"> تواصل معنا </a></li>
+                    </ul>
+                </div> <!-- end of footer-col -->
+                <div class="footer-col third">
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <p class="p-small">يسعدنا التواصل دائما</p>
+                </div> <!-- end of footer-col -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
 </div> <!-- end of footer -->  
 <!-- end of footer -->
 
 
-<!-- Copyright -->
-<div class="copyright">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-              <p class="p-small">Copyright © <a href="#your-link">WebWhy</a></p>
-          </div> <!-- end of col -->
-      </div> <!-- enf of row -->
-  </div> <!-- end of container -->
-</div> <!-- end of copyright --> 
-<!-- end of copyright -->
+  <!-- Copyright -->
+  <div class="copyright">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <p class="p-small">Copyright © <a href="#your-link">WebWhy</a></p>
+              </div> <!-- end of col -->
+          </div> <!-- enf of row -->
+      </div> <!-- end of container -->
+  </div> <!-- end of copyright --> 
+  <!-- end of copyright -->
+  
 
-    <!-- Back To Top Button -->
-    <button onclick="topFunction()" id="myBtn">
-        <img src="images/up-arrow.png" alt="alternative">
-    </button>
-    <!-- end of back to top button -->
+  <!-- Back To Top Button -->
+  <button onclick="topFunction()" id="myBtn">
+      <img src="images/up-arrow.png" alt="alternative">
+  </button>
+  <!-- end of back to top button -->
+
 
     <!-- Scripts -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
