@@ -328,7 +328,7 @@ a:hover {
 }
 
 .navbar .logo-image img {
-    width: 187px; height: 100px;
+    width: 178px; height: 112px;
 
 }
 
@@ -347,7 +347,7 @@ a:hover {
 }
 
 .navbarLogo .logo-image img {
-    width: 187px; height: 100px;
+    width: 178px; height: 112px;
 
 }
 .navbarLogo {
@@ -364,7 +364,7 @@ a:hover {
 }
 
 .navbarLogo .logo-image img {
-    width: 131px; height: 81px;
+    width: 178px; height: 112px;
 
 }
 /* //////////////////////////////////////////////////// */
@@ -392,7 +392,7 @@ a:hover {
 
 .offcanvas-collapse {
 	position: fixed;
-	top: 3.25rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	top: 6.55rem; /* adjusts the height between the top of the page and the offcanvas menu */
 	bottom: 0;
 	left: 100%;
 	width: 100%;
@@ -413,8 +413,8 @@ a:hover {
 }
 
 .navbar .navbar-nav {
-	margin-top: 0.75rem;
-	margin-bottom: 0.5rem;
+		margin-top: 0.75rem;
+		margin-bottom: 0.5rem;
 }
 
 .navbar .nav-item .nav-link {
@@ -615,7 +615,7 @@ a:hover {
 .header .header-content {
 	padding-top: 11rem;
 	padding-bottom: 9rem;
-	background-image: url(../images/covernew.jpeg);
+	background-image: url(../images/covernew3.jpeg);
 	background-size: cover;
 	text-align: center; 
 }
@@ -892,13 +892,15 @@ a:hover {
 }
 
 
+
 /*******************/
 /*     Contact     */
 /*******************/
 .form-1 {
 	padding-top: 9.25rem;
 	padding-bottom: 8.5rem;
-	background: linear-gradient(rgba(2, 15, 29, 0.1), rgba(2, 15, 29, 0.1)), url('../images/bake.cms') center center no-repeat;
+	background: linear-gradient(rgba(2, 15, 29, 0.1), rgba(2, 15, 29, 0.1)), url('../images/contactnew444.jpg') center center no-repeat;
+	opacity: 0.8;
 	background-size: cover;
 	text-align: center;
 }
@@ -1194,15 +1196,15 @@ a:hover {
 
 	/* Navigation */
 	.navbar {
-		padding-top: 1.75rem;
+		padding-top: 0.15rem;
 		background-color: transparent;
 		box-shadow: none;
 		transition: all 0.2s;
 	}
 
 	.navbar.top-nav-collapse {
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
+		/* padding-top: 0.5rem;
+		padding-bottom: 0.5rem; */
 		background-color: #64b1bf94;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
 	}
@@ -1599,6 +1601,7 @@ a:hover {
 /**********************/
 /*     Projects page     */
 /**********************/
+
 .wrap
 {
   margin:50px auto 0 auto;
@@ -1733,9 +1736,6 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 	}
 
-
-
-	
 	/* The Wave Animation */
 .wavy {
 	position: relative;
@@ -1764,4 +1764,20 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 	100% {
 		transform: translateY(0px);
 	}
+}
+
+
+@media (max-width:1200px) {
+ul{
+font-size: 1.5rem;
+
+
+	}
+	.elolo{
+
+margin-left: 9%;
+
+
+	}
+
 }

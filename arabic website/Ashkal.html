@@ -1,41 +1,36 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Your description">
     <meta name="author" content="Your name">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>أبيدوس-معلومات</title>
-
-
-
-    
+    <title>Abedous</title>
 
     <style>
-
-
-
-        .slider, 
-        .slider > div {
+        .slider,
+        .slider>div {
             /* Images default to Center Center. Maybe try 'center top'? */
             background-position: center top;
             display: block;
             width: 100%;
-            height: 100vh;
-            /* height: 100vh; *//* If you want fullscreen */
+            height: 100%;
+            /* height: 100vh; */
+            /* If you want fullscreen */
             position: relative;
             background-size: cover;
             background-repeat: no-repeat;
@@ -46,12 +41,12 @@
             -webkit-transition: transform .4s;
             transition: transform .4s;
         }
-        
-        .slider > div {
+
+        .slider>div {
             position: absolute;
         }
-        
-        .slider > i {
+
+        .slider>i {
             color: #5bbd72;
             position: absolute;
             font-size: 60px;
@@ -69,48 +64,51 @@
             border-radius: 3px;
             z-index: 4;
         }
-        
-        .slider > i svg {
+
+        .slider>i svg {
             margin-top: 3px;
         }
-        
-        .slider > .left {
+
+        .slider>.left {
             left: -100px;
         }
-        .slider > .right {
+
+        .slider>.right {
             right: -100px;
         }
-        .slider:hover > .left {
+
+        .slider:hover>.left {
             left: 0;
         }
-        .slider:hover > .right {
+
+        .slider:hover>.right {
             right: 0;
         }
-        
-        .slider > i:hover {
-            background:#fff;
+
+        .slider>i:hover {
+            background: #fff;
             background: rgba(255, 255, 255, .8);
             transform: translateX(-2px);
         }
-        
-        .slider > i.right:hover {
+
+        .slider>i.right:hover {
             transform: translateX(2px);
         }
-        
-        .slider > i.right:active,
-        .slider > i.left:active {
+
+        .slider>i.right:active,
+        .slider>i.left:active {
             transform: translateY(1px);
         }
-        
-        .slider:hover > div {
+
+        .slider:hover>div {
             transform: scale(1.01);
         }
-        
-        .hoverZoomOff:hover > div {
+
+        .hoverZoomOff:hover>div {
             transform: scale(1);
         }
-        
-        .slider > ul {
+
+        .slider>ul {
             position: absolute;
             bottom: 10px;
             left: 50%;
@@ -119,8 +117,8 @@
             margin: 0;
             transform: translateX(-50%);
         }
-        
-        .slider > ul > li {
+
+        .slider>ul>li {
             padding: 0;
             width: 20px;
             height: 20px;
@@ -135,39 +133,39 @@
             -webkit-transition: .3s;
             transition: .3s;
         }
-        
-        .slider > ul > .showli {
+
+        .slider>ul>.showli {
             background-color: #7EC03D;
             -moz-animation: boing .5s forwards;
             -o-animation: boing .5s forwards;
             -webkit-animation: boing .5s forwards;
             animation: boing .5s forwards;
         }
-        
-        .slider > ul > li:hover {
+
+        .slider>ul>li:hover {
             background-color: #7EC03D;
         }
-        
-        .slider > .show {
+
+        .slider>.show {
             z-index: 1;
         }
-        
-        .hideDots > ul {
+
+        .hideDots>ul {
             display: none;
         }
-        
-        .showArrows > .left {
+
+        .showArrows>.left {
             left: 0;
         }
-        
-        .showArrows > .right {
+
+        .showArrows>.right {
             right: 0;
         }
-        
+
         .titleBar {
             z-index: 2;
             display: inline-block;
-            background: rgba(0,0,0,.5);
+            background: rgba(0, 0, 0, .5);
             position: absolute;
             width: 100%;
             bottom: 0;
@@ -176,32 +174,32 @@
             transition: .3s;
             color: #fff;
         }
-        
+
         .titleBar * {
             transform: translate(-20px, 30px);
             transition: all 700ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
             opacity: 0;
         }
-        
+
         .titleBarTop .titleBar * {
             transform: translate(-20px, -30px);
         }
-        
+
         .slider:hover .titleBar,
         .slider:hover .titleBar * {
             transform: translate(0);
             opacity: 1;
         }
-        
+
         .titleBarTop .titleBar {
             top: 0;
             bottom: initial;
             transform: translateY(-100%);
         }
-        
-        .slider > div span {
+
+        .slider>div span {
             display: block;
-            background: rgba(0,0,0,.5);
+            background: rgba(0, 0, 0, .5);
             position: absolute;
             bottom: 0;
             color: #fff;
@@ -209,53 +207,64 @@
             padding: 0;
             width: 100%;
         }
-        
-        
+
+
         @keyframes boing {
             0% {
                 transform: scale(1.2);
             }
+
             40% {
                 transform: scale(.6);
             }
+
             60% {
                 transform: scale(1.2);
             }
+
             80% {
                 transform: scale(.8);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         /* -------------------------------------- */
-        
+
         #slider2 {
             max-width: 30%;
             margin-right: 20px;
         }
-        
+
         .row2Wrap {
             display: flex;
         }
-        
+
         .content {
             padding: 50px;
             margin-bottom: 100px;
         }
-        
+
         html {
             height: 100%;
             box-sizing: border-box;
         }
-        *, *:before, *:after {
+
+        *,
+        *:before,
+        *:after {
             box-sizing: inherit;
         }
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             font-family: 'Crimson Text', sans-serif;
             font-weight: 100;
         }
+
         body {
             font: 15px 'Titillium Web', Arial, sans-serif;
             /* background: radial-gradient(#121212, #000); */
@@ -264,35 +273,51 @@
             margin: 0;
             padding: 0;
         }
-        
+.zabta{
+    width: 100%;
+    height: 150%;
+     display: flex;
+      flex-direction: column;
+       justify-items: center;
+         align-items: center;
+
+
+}
         .content {
             padding: 10px 15vw;
         }
+
+        @media screen and (max-width: 1000px){
+            .zabta{
+                height:101%;
+                width: 102%;
+            }
+        }
         
-        
-        
-        
-            </style>
+    </style>
 
 
-    
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/Abedous(Logo).png">
 </head>
 
+<body>
 
-<body style="direction: rtl;">
-    
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
         <div class="container">
@@ -312,140 +337,133 @@
 
             </button>
 
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav me-auto navbar-nav-scroll animate__animated animate__heartBeat">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">الصفحة الرئيسية</a>
+         
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ms-auto navbar-nav-scroll animate__animated animate__heartBeat">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">الصفحة الرئيسية</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="aboutus.html">معلومات عنا</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="Services.html">خدماتنا</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">مشاريعنا</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">تواصل معنا</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                    aria-expanded="false">اللغة</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                    <li><a class="dropdown-item" href="../aboutus.html">English</a></li>
+                    <li>
+                        <div class="dropdown-divider"></div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">المشاريع</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Services.html">خدماتنا</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">معلومات عنا</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article.html">Article Details</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
-                        </ul> -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactus.html">تواصل معنا</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">اللغة</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="../Ashkal.html">English</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="Ashkal.html">عربي</a></li>
-                        </ul>
-                    </li>
+                    <li><a class="dropdown-item" href="aboutus.html">عربي</a></li>
                 </ul>
-                <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-instagram fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </span>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+            </li>
+        </ul>
+        <span class="nav-item social-icons">
+            <span class="fa-stack">
+                <a href="https://api.whatsapp.com/send?phone=+971-67312884">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-whatsapp fa-stack-1x"></i>
+                </a>
+            </span>
+        
+        </span>
+    </div> <!-- end of navbar-collapse -->
+</div> <!-- end of container -->
+</nav> <!-- end of navbar -->
+<!-- end of navigation -->
 
-     <!-- Header -->
-     <header class="ex-header">
+
+
+    <!-- Header -->
+    <header class="ex-header">
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h1 class="animate__animated animate__bounce">معلومات عن الخدمة</h1>
+                    <h1 class="animate__animated animate__bounce">Our Services</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </header> <!-- end of ex-header -->
     <!-- end of header -->
 
-    
 
 
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
+    <!-- Slider 1 -->
+    <div class="zabta" >
+        <div class="slider" id="slider1" style="width: 80%; height: 100%;">
+            <!-- Slides -->
+            <div style="background-image:url(images/alhayra11.jpg); width: 100%; height: 100%;"></div>
+            <div style="background-image:url(images/alhayra9.jpg); width: 100%; height: 100%;"></div>
+            <div style="background-image:url(images/alhayra-project.jpg); width: 100%; height: 100%;"></div>
+            <div style="background-image:url(images/alhayra1.jpg); width: 100%; height: 100%;"></div>
+            <div style="background-image:url(images/alhayra8.jpg); width: 100%; height: 100%;"></div>
+            <!-- The Arrows -->
+            <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
+                </svg></i>
+            <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                        transform="translate(100, 100) rotate(180) "></path>
+                </svg></i>
+            <!-- Title Bar -->
+            <span class="titleBar">
+                <!-- <h1 style="text-align: center; color: beige;">El Ashkal El Handsia</h1> -->
+            </span>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
 
 
+        <div style="text-align: center;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+            <h1>
+                A breif description about this service
+
+            </h1>
+            <br>
+          
+
+            <p style="background-color: #9ba3b11f; height: fit-content; text-align: center; width: 80%; ">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
 
 
+        <br>
 
-
-<!-- Slider 1 -->
-<div class="slider" id="slider1">
-    <!-- Slides -->
-    <div style="background-image:url(images/alhayra11.jpg)"></div>
-    <div style="background-image:url(images/alhayra9.jpg)"></div>
-    <div style="background-image:url(images/alhayra-project.jpg)"></div>
-    <div style="background-image:url(images/alhayra1.jpg)"></div>
-    <div style="background-image:url(images/alhayra8.jpg)"></div>
-    <!-- The Arrows -->
-    <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
-            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
-        </svg></i>
-    <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
-            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path>
-        </svg></i>
-    <!-- Title Bar -->
-    <span class="titleBar">
-        <h1 style="text-align: center; color: beige;">الاشكال الهندسية</h1>
-    </span>
-</div>
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-<div style="text-align: center;">
-
-<h1>
-وصف موجز عن هذه الخدمة
-
-</h1>
-
-<br>
-<br>
-
-<p style="background-color: beige; height: 33%; text-align: center; ">
-    هو النص الوهمي القياسي في الصناعة منذ القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحًا من النوع وتدافعت عليه لعمل كتاب عينة. لقد نجت ليس فقط خمسة قرون ، ولكن أيضًا القفزة في التنضيد الإلكتروني ، وظلت دون تغيير جوهري. تم نشره في الستينيات من القرن الماضي بإصدار
-    هو النص الوهمي القياسي في الصناعة منذ القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحًا من النوع وتدافعت عليه لعمل كتاب عينة. لقد نجت ليس فقط خمسة قرون ، ولكن أيضًا القفزة في التنضيد الإلكتروني ، وظلت دون تغيير جوهري. تم نشره في الستينيات من القرن الماضي بإصدار
-</p>
-</div>
-
-
-<br>
-
-
-
-
-
-
-
-
-
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
 
@@ -456,18 +474,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="footer-col first" style="    margin-right: 30px;">
-                        <h6>عن شركتنا</h6>
-                        <p class="p-small">2 النوامية - عمان - الامارات العربية المتحدة</p>
+                    <div class="footer-col first">
+                        <h6>About Abedous</h6>
+                        <p class="p-small">2 Al Nuaimia - Ajman - United Arab Emirates.</p>
                         <p class="p-small">+971-67312884</p>
                         <p class="p-small">info@abedous.com</p>
                     </div> <!-- end of footer-col -->
-                    <div class="footer-col second" id="linksmain" style="    margin-left: 130px; margin-right: 50px;">
-                        <h6>الروابط</h6>
-                        <ul class="list-unstyled li-space-lg p-small" style="padding-right: 0%;">
+                    <div class="footer-col second">
+                        <h6>Links</h6>
+                        <ul class="list-unstyled li-space-lg p-small">
                             <!-- <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li> -->
                             <!-- <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li> -->
-                            <li>انتقل الي:  <a href="#header"> الصفحةالرئيسية </a>, <a href="#services"> مشاريع </a>, <a href="#projects"> معلومات عنا </a>, <a href="#contact"> تواصل معنا </a></li>
+                            <li>Menu: <a href="index.html">الصفحة الرئيسية</a>, <a href="projects.html">Projects</a>, <a
+                                    href="Services.html">Services</a>, <a href="aboutus.html">About</a>, <a
+                                    href="contactus.html">Contact</a></li>
                         </ul>
                     </div> <!-- end of footer-col -->
                     <div class="footer-col third">
@@ -477,19 +497,18 @@
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
                             </a>
                         </span>
-                        </span>
                         <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-instagram fa-stack-1x"></i>
                             </a>
                         </span>
-                        <p class="p-small">يسعدنا التواصل دائما</p>
+                        <p class="p-small">We would love to hear from you</p>
                     </div> <!-- end of footer-col -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
+    </div> <!-- end of footer -->
     <!-- end of footer -->
 
 
@@ -525,163 +544,163 @@
     <script>
 
 
-(function($) {
-  "use strict";
-  $.fn.sliderResponsive = function(settings) {
-    
-    var set = $.extend( 
-      {
-        slidePause: 5000,
-        fadeSpeed: 800,
-        autoPlay: "on",
-        showArrows: "off", 
-        hideDots: "off", 
-        hoverZoom: "on",
-        titleBarTop: "off"
-      },
-      settings
-    ); 
-    
-    var $slider = $(this);
-    var size = $slider.find("> div").length; //number of slides
-    var position = 0; // current position of carousal
-    var sliderIntervalID; // used to clear autoplay
-      
-    // Add a Dot for each slide
-    $slider.append("<ul></ul>");
-    $slider.find("> div").each(function(){
-      $slider.find("> ul").append('<li></li>');
-    });
-      
-    // Put .show on the first Slide
-    $slider.find("div:first-of-type").addClass("show");
-      
-    // Put .showLi on the first dot
-    $slider.find("li:first-of-type").addClass("showli")
+        (function ($) {
+            "use strict";
+            $.fn.sliderResponsive = function (settings) {
 
-     //fadeout all items except .show
-    $slider.find("> div").not(".show").fadeOut();
-    
-    // If Autoplay is set to 'on' than start it
-    if (set.autoPlay === "on") {
-        startSlider(); 
-    } 
-    
-    // If showarrows is set to 'on' then don't hide them
-    if (set.showArrows === "on") {
-        $slider.addClass('showArrows'); 
-    }
-    
-    // If hideDots is set to 'on' then hide them
-    if (set.hideDots === "on") {
-        $slider.addClass('hideDots'); 
-    }
-    
-    // If hoverZoom is set to 'off' then stop it
-    if (set.hoverZoom === "off") {
-        $slider.addClass('hoverZoomOff'); 
-    }
-    
-    // If titleBarTop is set to 'on' then move it up
-    if (set.titleBarTop === "on") {
-        $slider.addClass('titleBarTop'); 
-    }
+                var set = $.extend(
+                    {
+                        slidePause: 5000,
+                        fadeSpeed: 800,
+                        autoPlay: "on",
+                        showArrows: "off",
+                        hideDots: "off",
+                        hoverZoom: "on",
+                        titleBarTop: "off"
+                    },
+                    settings
+                );
 
-    // function to start auto play
-    function startSlider() {
-      sliderIntervalID = setInterval(function() {
-        nextSlide();
-      }, set.slidePause);
-    }
-    
-    // on mouseover stop the autoplay
-    $slider.mouseover(function() {
-      if (set.autoPlay === "on") {
-        clearInterval(sliderIntervalID);
-      }
-    });
-      
-    // on mouseout starts the autoplay
-    $slider.mouseout(function() {
-      if (set.autoPlay === "on") {
-        startSlider();
-      }
-    });
+                var $slider = $(this);
+                var size = $slider.find("> div").length; //number of slides
+                var position = 0; // current position of carousal
+                var sliderIntervalID; // used to clear autoplay
 
-    //on right arrow click
-    $slider.find("> .right").click(nextSlide)
+                // Add a Dot for each slide
+                $slider.append("<ul></ul>");
+                $slider.find("> div").each(function () {
+                    $slider.find("> ul").append('<li></li>');
+                });
 
-    //on left arrow click
-    $slider.find("> .left").click(prevSlide);
-      
-    // Go to next slide
-    function nextSlide() {
-      position = $slider.find(".show").index() + 1;
-      if (position > size - 1) position = 0;
-      changeCarousel(position);
-    }
-    
-    // Go to previous slide
-    function prevSlide() {
-      position = $slider.find(".show").index() - 1;
-      if (position < 0) position = size - 1;
-      changeCarousel(position);
-    }
+                // Put .show on the first Slide
+                $slider.find("div:first-of-type").addClass("show");
 
-    //when user clicks slider button
-    $slider.find(" > ul > li").click(function() {
-      position = $(this).index();
-      changeCarousel($(this).index());
-    });
+                // Put .showLi on the first dot
+                $slider.find("li:first-of-type").addClass("showli")
 
-    //this changes the image and button selection
-    function changeCarousel() {
-      $slider.find(".show").removeClass("show").fadeOut();
-      $slider
-        .find("> div")
-        .eq(position)
-        .fadeIn(set.fadeSpeed)
-        .addClass("show");
-      // The Dots
-      $slider.find("> ul").find(".showli").removeClass("showli");
-      $slider.find("> ul > li").eq(position).addClass("showli");
-    }
+                //fadeout all items except .show
+                $slider.find("> div").not(".show").fadeOut();
 
-    return $slider;
-  };
-})(jQuery);
+                // If Autoplay is set to 'on' than start it
+                if (set.autoPlay === "on") {
+                    startSlider();
+                }
+
+                // If showarrows is set to 'on' then don't hide them
+                if (set.showArrows === "on") {
+                    $slider.addClass('showArrows');
+                }
+
+                // If hideDots is set to 'on' then hide them
+                if (set.hideDots === "on") {
+                    $slider.addClass('hideDots');
+                }
+
+                // If hoverZoom is set to 'off' then stop it
+                if (set.hoverZoom === "off") {
+                    $slider.addClass('hoverZoomOff');
+                }
+
+                // If titleBarTop is set to 'on' then move it up
+                if (set.titleBarTop === "on") {
+                    $slider.addClass('titleBarTop');
+                }
+
+                // function to start auto play
+                function startSlider() {
+                    sliderIntervalID = setInterval(function () {
+                        nextSlide();
+                    }, set.slidePause);
+                }
+
+                // on mouseover stop the autoplay
+                $slider.mouseover(function () {
+                    if (set.autoPlay === "on") {
+                        clearInterval(sliderIntervalID);
+                    }
+                });
+
+                // on mouseout starts the autoplay
+                $slider.mouseout(function () {
+                    if (set.autoPlay === "on") {
+                        startSlider();
+                    }
+                });
+
+                //on right arrow click
+                $slider.find("> .right").click(nextSlide)
+
+                //on left arrow click
+                $slider.find("> .left").click(prevSlide);
+
+                // Go to next slide
+                function nextSlide() {
+                    position = $slider.find(".show").index() + 1;
+                    if (position > size - 1) position = 0;
+                    changeCarousel(position);
+                }
+
+                // Go to previous slide
+                function prevSlide() {
+                    position = $slider.find(".show").index() - 1;
+                    if (position < 0) position = size - 1;
+                    changeCarousel(position);
+                }
+
+                //when user clicks slider button
+                $slider.find(" > ul > li").click(function () {
+                    position = $(this).index();
+                    changeCarousel($(this).index());
+                });
+
+                //this changes the image and button selection
+                function changeCarousel() {
+                    $slider.find(".show").removeClass("show").fadeOut();
+                    $slider
+                        .find("> div")
+                        .eq(position)
+                        .fadeIn(set.fadeSpeed)
+                        .addClass("show");
+                    // The Dots
+                    $slider.find("> ul").find(".showli").removeClass("showli");
+                    $slider.find("> ul > li").eq(position).addClass("showli");
+                }
+
+                return $slider;
+            };
+        })(jQuery);
 
 
- 
-//////////////////////////////////////////////
-// Activate each slider - change options
-//////////////////////////////////////////////
-$(document).ready(function() {
-  
-  $("#slider1").sliderResponsive({
-  // Using default everything
-    // slidePause: 5000,
-    // fadeSpeed: 800,
-    // autoPlay: "on",
-    // showArrows: "off", 
-    // hideDots: "off", 
-    // hoverZoom: "on", 
-    // titleBarTop: "off"
-  });
-  
-  $("#slider2").sliderResponsive({
-    fadeSpeed: 300,
-    autoPlay: "off",
-    showArrows: "on",
-    hideDots: "on"
-  });
-  
-  $("#slider3").sliderResponsive({
-    hoverZoom: "off",
-    hideDots: "on"
-  });
-  
-}); 
+
+        //////////////////////////////////////////////
+        // Activate each slider - change options
+        //////////////////////////////////////////////
+        $(document).ready(function () {
+
+            $("#slider1").sliderResponsive({
+                // Using default everything
+                // slidePause: 5000,
+                // fadeSpeed: 800,
+                // autoPlay: "on",
+                // showArrows: "off", 
+                // hideDots: "off", 
+                // hoverZoom: "on", 
+                // titleBarTop: "off"
+            });
+
+            $("#slider2").sliderResponsive({
+                fadeSpeed: 300,
+                autoPlay: "off",
+                showArrows: "on",
+                hideDots: "on"
+            });
+
+            $("#slider3").sliderResponsive({
+                hoverZoom: "off",
+                hideDots: "on"
+            });
+
+        });
 
 
 
