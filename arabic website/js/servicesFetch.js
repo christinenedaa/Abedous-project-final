@@ -72,3 +72,26 @@ function addServiceToServicesPage(
 
         wrapDiv.appendChild(servicesdetailsLink);
 }
+const servicedata = {
+    serviceid: 1,
+    servicetitle: "اداره المرافق",
+    servicedescription: "اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق",
+}
+
+const textcontainer = document.createElement("div");
+textcontainer.classList.add("text-container");
+textcontainer.setAttribute("style","display: flex; flex-direction: column; justify-content: center; align-items: center;")
+
+const h2texttitle = document.createElement("h2");
+h2texttitle.classList.add("animate__animated", "animate__bounce");
+h2texttitle.innerText = servicedata.servicetitle;
+
+const ptext = document.createElement("p");
+ptext.setAttribute("style","width: 42%")
+ptext.innerText = servicedata.servicedescription;
+
+textcontainer.appendChild(h2texttitle);
+textcontainer.appendChild(ptext);
+
+const colclass = document.querySelector(".col-lg-17");
+colclass.appendChild(textcontainer);
