@@ -1,31 +1,93 @@
 //-----------------Fetch data-------------------------//
 // const axios = require("axios");
 const { axios } = window;
-axios.defaults.baseURL="https://jsonplaceholder.typicode.com";
+axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
 
-const id = window.location.hash.substring(1);
-axios.get(`/posts/${id}`)
-// .then(({ data})=>{
-.then(({ data:{title,body}})=>{
 
-// bgeb data bta3t l title 
-	const projectTitleH1 = document.getElementById("projectTitle");
-	projectTitleH1.innerText = title;
+// axios.get(`/photos/`)
+//     .then(({ data }) => {
+//         data.splice(0,1) .forEach(({ //TODO: delete splice(0,10)
+//             id,
+//             title,
+//             thumbnailUrl,        
+//         }) => {
+//             addProjectToProjectPage(id,thumbnailUrl,title);
+//         })
+//     })
+
+
+// {
+//     "id": 1,
+//     "title": "Project 1",
+//     "short_description": "short Desc",
+//     "description": "desc",
+//     "images": [
+//         "uploads/b40a53880ba03b457c242ab7253d4355.png",
+//         "uploads/ca4a02d16b741938fea1fdc107a58d77.png",
+//         "uploads/24d7c3c1e0a98ec039111132b2be81aa.png",
+//         "uploads/5e4ca7b949585a1ccdfd7f3f0f02d445.png"
+//     ]
+// }
+
+
+const images = Array.from({length:20}).map(()=>("https://loremflickr.com/640/360"))
+
+const data = {
+    id: 1,
+    title: "Project 1",
+    short_description: "short Desc",
+    description: "desc",
+    images:images,
+}
+
+console.log(data)
+
+// data .forEach(({ //TODO: delete splice(0,10)
+//                 id,
+//                 title,
+//                 thumbnailUrl,        
+//             }) => {
+//                 addProjectToProjectPage(id,thumbnailUrl,title);
+//             })
+
+
+const projectTitleH1 = document.getElementById("projectTitle");
+projectTitleH1.innerText = data.title;
+
+data.images.forEach(img=>{
+    console.log("img")
+    addProjectToProjectPage(img)
+})
+
+// bgib data bta3t l description
+	const projectdescriptionn = document.querySelector("#projectDescription");
+	projectdescriptionn.innerText = data.description;
+
+// bgib data bta3t l location "short description"
+	const projectlocation = document.querySelector("#projectLocation");
+	projectlocation.innerText = data.short_description;
+
+function addProjectToProjectPage(
+        img,
+    ){
+    // bgeb data bta3t l title 
 
 	// bgeb data bta3t l images gallery 
 	// const imageGallery = document.querySelector(".IMGcontainer");
 	// const IMGGallery = document.getElementById("projectTitle");
-	// IMGGallery.innerText = image;
+	// IMGGallery.innerText = thumbnailUrl;
 	// imageGallery.appendChild(IMGGallery);
 
-// bgib data bta3t l description
-	const projectdescriptionn = document.querySelector("#projectDescription");
-	projectdescriptionn.innerText = body;
+        const ImagesHolder = document.createElement("div");
+        ImagesHolder.classList.add("container__img-holder");
+        
+        const projectImages = document.createElement("img");
+		ImagesHolder.classList.add("border_radius_size");
+        projectImages.setAttribute("src",img);
+        
+        ImagesHolder.appendChild(projectImages);
 
-// bgib data bta3t l location "short description"
-	const projectlocation = document.querySelectorAll(".text-box mb-1:nth-child(4)");
-	const projectloc = document.getElementById("projectLocation");
-	projectloc.innerText = body;
-	projectlocation.appendChild(projectloc);
+        const ImageContainerDiv = document.querySelector(".IMGcontainer");
+        ImageContainerDiv.appendChild(ImagesHolder);
 
-})
+}
