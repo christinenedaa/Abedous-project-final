@@ -7,11 +7,16 @@ i18next.init({
     en: {
       translation: {
         projecthead: "Projects",
+        desc: "Project Description",
+        loca: "Project Location",
       },
     },
     ar: {
       translation: {
         projecthead: "المشاريع",
+        desc: "نبذة مختصرة عن المشروع",
+        loca: "مكان المشروع",
+
       },
     },
   },
@@ -19,3 +24,6 @@ i18next.init({
 // initialized and ready to go!
 // i18next is already initialized, because the translation resources where passed via init function
 document.querySelector("#projecthead").innerHTML = i18next.t("projecthead");
+document.querySelector("#desc").innerHTML = i18next.t("desc");
+document.querySelector("#loca").innerHTML = i18next.t("loca");
+
