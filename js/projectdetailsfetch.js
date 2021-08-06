@@ -9,12 +9,30 @@ const id = window.location.hash.substring(1);
 
 axios
   .get(`/projects/${id}`)
-  .then(({ data: { title, description, short_description, images } }) => {
-    addTitle(title);
-    addDescription(description);
-    addShortDescription(short_description);
-    addImages(images);
-  })
+  .then(
+    ({
+      data: {
+        title,
+        description,
+        short_description,
+        title_a,
+        description_a,
+        short_description_a,
+        images,
+      },
+    }) => {
+      if (currentLanguage == "en") {
+        addTitle(title);
+        addDescription(description);
+        addShortDescription(short_description);
+      } else {
+        addTitle(title_a);
+        addDescription(description_a);
+        addShortDescription(short_description_a);
+      }
+      addImages(images);
+    }
+  )
   .then(() => handlePopupImages());
 
 function addTitle(title) {
