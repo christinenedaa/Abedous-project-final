@@ -1,8 +1,9 @@
-const {i18next} = window;
-console.log(i18next)
+const { i18next } = window;
+
+const currentLanguage = localStorage.getItem("lang");
 
 i18next.init({
-  lng: 'ar', // if you're using a language detector, do not define the lng option
+  lng: currentLanguage, // if you're using a language detector, do not define the lng option
   debug: true,
   resources: {
     en: {

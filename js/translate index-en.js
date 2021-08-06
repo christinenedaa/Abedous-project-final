@@ -1,8 +1,8 @@
-const { i18next } = window;
+// const { i18next } = window;
 
 // i18next.languages = ["ar", "en"];
 // console.log(i18next);
-const currentLanguage = localStorage.getItem("lang");
+// const currentLanguage = localStorage.getItem("lang");
 
 i18next.init({
   lng: currentLanguage, // if you're using a language detector, do not define the lng option
@@ -10,18 +10,7 @@ i18next.init({
   resources: {
     en: {
       translation: {
-        // Header
-
-        // "home": "Home",
-        // 'about':"About",
-        // 'services':"Services",
-        // 'projects':"Projects",
-        // 'contacts':"Contact Us",
-        // 'language':"Language",
-        // 'linkat':"Links",
-        // 'adress':"2 Al Nuaimia - Ajman - United Arab Emirates.",
-        // 'pageend':"We would love to hear from you",
-        // 'footabout':"About Abedous",
+     
         head1: "Mission",
         paramission:
           "Our mission is to deliver for our customers the best quality of construction services at competitive rates with highest level of professionalism and integrity resulting in long term relationships with our employees, customers, suppliers and subcontractors.",
@@ -37,18 +26,7 @@ i18next.init({
     },
     ar: {
       translation: {
-        // Header
-
-        // "home": "الصفحة الرئيسية",
-        // 'about':"معلومات عنا",
-        // 'services':"خدماتنا",
-        // 'projects':"مشاريعنا",
-        // 'contacts':"تواصل معنا",
-        // 'language':"اللغة",
-        // 'linkat':"الروابط",
-        // 'adress':"2 النعومية - عجان - الامارات العربية المتحدة",
-        // 'footabout':"عن شركتنا",
-        // 'pageend':"يسعدنا التواصل دائما",
+      
         head1: "مهمتنا",
         paramission:
           "مهمتنا هي أن نقدم لعملائنا أفضل جودة لخدمات البناء بأسعار تنافسية مع أعلى مستوى من الاحتراف والنزاهة مما يؤدي إلى علاقات طويلة الأمد مع موظفينا وعملائنا وموردينا ومقاولينا من الباطن.",
@@ -66,22 +44,7 @@ i18next.init({
 });
 // initialized and ready to go!
 // i18next is already initialized, because the translation resources where passed via init function
-// document.querySelectorAll(".nav-link")[0].innerHTML = i18next.t('home');
-// document.querySelectorAll(".nav-link")[1].innerHTML = i18next.t('about');
-// document.querySelectorAll(".nav-link")[2].innerHTML = i18next.t('services');
-// document.querySelectorAll(".nav-link")[3].innerHTML = i18next.t('projects');
-// document.querySelectorAll(".nav-link")[4].innerHTML = i18next.t('contacts');
-// document.querySelectorAll(".nav-link")[5].innerHTML = i18next.t('language');
 
-// document.querySelectorAll("#footer-li>a")[0].innerHTML = i18next.t('home');
-// document.querySelectorAll("#footer-li>a")[1].innerHTML = i18next.t('about');
-// document.querySelectorAll("#footer-li>a")[2].innerHTML = i18next.t('services');
-// document.querySelectorAll("#footer-li>a")[3].innerHTML = i18next.t('projects');
-// document.querySelectorAll("#footer-li>a")[4].innerHTML = i18next.t('contacts');
-// document.querySelector("#linkat").innerHTML = i18next.t('linkat');
-// document.querySelector("#adress").innerHTML = i18next.t('adress');
-// document.querySelector("#footabout").innerHTML = i18next.t('footabout');
-// document.querySelector("#pageend").innerHTML = i18next.t('pageend');
 document.querySelector("#head1").innerHTML = i18next.t("head1");
 document.querySelector("#paramission").innerHTML = i18next.t("paramission");
 document.querySelector("#head2").innerHTML = i18next.t("head2");
