@@ -16,8 +16,13 @@ i18next.load(["ar", "eng"]).init({
         contacts: "Contact Us",
         language: "Language",
         linkat: "Links",
+        adress: "2 Al Nuaimia - Ajman - United Arab Emirates.",
+        pageend: "We would love to hear from you",
+        footabout: "About Abedous",
 
-        // Footer
+        // About Us Page
+
+        abouthead1: "About Us",
       },
     },
     ar: {
@@ -31,6 +36,10 @@ i18next.load(["ar", "eng"]).init({
         contacts: "تواصل معنا",
         language: "اللغة",
         linkat: "الروابط",
+        adress: "2 النعومية - عجان - الامارات العربية المتحدة",
+        pageend: "يسعدنا التواصل دائما",
+        footabout: "عن شركتنا",
+        aaamm: "عن شركتنا",
 
         // Footer
       },
@@ -51,4 +60,10 @@ document.querySelectorAll("a")[11].innerHTML = i18next.t("about");
 document.querySelectorAll("a")[12].innerHTML = i18next.t("services");
 document.querySelectorAll("a")[13].innerHTML = i18next.t("projects");
 document.querySelectorAll("a")[14].innerHTML = i18next.t("contacts");
-document.querySelector("#links").innerHTML = i18next.t("linkat");
+document.querySelector("#linkat").innerHTML = i18next.t("linkat");
+document.querySelector("#adress").innerHTML = i18next.t("adress");
+document.querySelector("#footabout").innerHTML = i18next.t("footabout");
+document.querySelector("#pageend").innerHTML = i18next.t("pageend");
+document.querySelector("#aaamm").innerHTML = i18next.t("aaamm");
+
+document.querySelector("#abouthead1").innerHTML = i18next.t("abouthead1");
