@@ -32,8 +32,6 @@ i18next.init({
           "Abedous Co. LLC is committed to building long-term relationships based on integrity Performance, value, and client satisfaction. We will continue to meet the changing needs our clients with our quality services delivered by the most qualified people. Our vision is to be recognized and respected as one of the premier total facility management companies in UAE.",
 
         // About Us Page
-
-        abouthead1: "About Us",
       },
     },
     ar: {
@@ -59,7 +57,6 @@ i18next.init({
         head3: "لماذا شركة أبيدوس للمقاولات؟",
         parahead1:
           "نحن ندرك أن لعملائنا الاختيار عند اختيار شركة إنشاءات. في شركة أبيدوس ، نسعى جاهدين لتجاوز التوقعات وتحقيق أقصى قدر من القيمة. التزام شركة أبيدوس هو لمصلحتك.",
-        abouthead1: "معلومات عنا",
 
         // Footer
       },
@@ -75,12 +72,12 @@ document.querySelectorAll(".nav-link")[3].innerHTML = i18next.t("projects");
 document.querySelectorAll(".nav-link")[4].innerHTML = i18next.t("contacts");
 document.querySelectorAll(".nav-link")[5].innerHTML = i18next.t("language");
 
-document.querySelectorAll("a")[10].innerHTML = i18next.t("home");
-document.querySelectorAll("a")[11].innerHTML = i18next.t("about");
-document.querySelectorAll("a")[12].innerHTML = i18next.t("services");
-document.querySelectorAll("a")[13].innerHTML = i18next.t("projects");
-document.querySelectorAll("a")[14].innerHTML = i18next.t("contacts");
-document.querySelector("#links").innerHTML = i18next.t("linkat");
+document.querySelectorAll("#footer-li>a")[0].innerHTML = i18next.t("home");
+document.querySelectorAll("#footer-li>a")[1].innerHTML = i18next.t("about");
+document.querySelectorAll("#footer-li>a")[2].innerHTML = i18next.t("services");
+document.querySelectorAll("#footer-li>a")[3].innerHTML = i18next.t("projects");
+document.querySelectorAll("#footer-li>a")[4].innerHTML = i18next.t("contacts");
+document.querySelector("#linkat").innerHTML = i18next.t("linkat");
 document.querySelector("#adress").innerHTML = i18next.t("adress");
 document.querySelector("#footabout").innerHTML = i18next.t("footabout");
 document.querySelector("#pageend").innerHTML = i18next.t("pageend");
