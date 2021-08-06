@@ -31,4 +31,7 @@ if (currentLanguage == "ar") {
 
   const pageTitle = document.querySelector("title");
   pageTitle.innerText = "ابيدوس";
+
+  const footerTeleNumber = document.querySelectorAll(".p-small")[1];
+  footerTeleNumber.setAttribute("style", "direction: ltr;text-align: right;");
 }
