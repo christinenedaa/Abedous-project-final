@@ -99,7 +99,8 @@
 
     .img-popup img {
       max-width: 70%;
-      width: 100%;
+      width: 50%;
+      padding-top: 50px;
       opacity: 0;
       transform: translateY(-100px);
       -webkit-transform: translateY(-100px);
@@ -107,6 +108,20 @@
       -ms-transform: translateY(-100px);
       -o-transform: translateY(-100px);
       padding-top: 10%;
+    }
+
+    @media (max-width:600px) {
+      .img-popup img{
+        width: 100%;
+        padding-top: 10px;
+        max-width: 100%;
+
+
+
+
+      }
+
+      
     }
 
     .close-btn {
