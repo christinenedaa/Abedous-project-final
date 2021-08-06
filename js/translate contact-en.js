@@ -4,7 +4,7 @@
 
 i18next.init({
   lng: currentLanguage, // if you're using a language detector, do not define the lng option
-  debug: true,
+
   resources: {
     en: {
       translation: {
@@ -19,13 +19,13 @@ i18next.init({
         // 'linkat':"Links",
         // 'pageend':"We would love to hear from you",
         // 'footabout':"About Abedous",
-        'adress':"2 Al Nuaimia - Ajman - United Arab Emirates.",
-        'head1contact': "Contact Us",
-        'headingline': "We will be honoured to be in touch with you",
-        'tele': "+971-67312884",
-        'namecontact': "Name",
-        'emailcontact': "Email",
-        'messagecontact': "Please write your message",
+        adress: "2 Al Nuaimia - Ajman - United Arab Emirates.",
+        head1contact: "Contact Us",
+        headingline: "We will be honoured to be in touch with you",
+        tele: "+971-67312884",
+        namecontact: "Name",
+        emailcontact: "Email",
+        messagecontact: "Please write your message",
 
         // About Us Page
       },
@@ -43,13 +43,13 @@ i18next.init({
         // 'linkat':"الروابط",
         // 'pageend':"يسعدنا التواصل دائما",
         // 'footabout':"عن شركتنا",
-        'adress':"2 النعومية - عجان - الامارات العربية المتحدة",
-        'head1contact': "تواصل معنا",
-        'headingline': "يشرفنا أن نتواصل معك",
-        'tele': "971-67312884+",
-        'namecontact': "الاسم",
-        'emailcontact': "البريد الالكتروني",
-        'messagecontact': "تفضل بكتابة ما ترغب به",
+        adress: "2 النعومية - عجان - الامارات العربية المتحدة",
+        head1contact: "تواصل معنا",
+        headingline: "يشرفنا أن نتواصل معك",
+        tele: "971-67312884+",
+        namecontact: "الاسم",
+        emailcontact: "البريد الالكتروني",
+        messagecontact: "تفضل بكتابة ما ترغب به",
 
         // Footer
       },

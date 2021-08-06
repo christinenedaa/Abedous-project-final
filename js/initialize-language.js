@@ -27,5 +27,8 @@ if (currentLanguage == "ar") {
   navBar.classList.add("me-auto");
 
   const wavyAbedousGroup = document.querySelector(".wavy");
-  wavyAbedousGroup.setAttribute("dir", "ltr");
+  wavyAbedousGroup?.setAttribute("dir", "ltr");
+
+  const pageTitle = document.querySelector("title");
+  pageTitle.innerText = "ابيدوس";
 }

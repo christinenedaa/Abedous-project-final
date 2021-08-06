@@ -66,7 +66,6 @@ function addServiceToServicesPage(id, img, title) {
 axios.get("http://192.168.43.157:8000/api/servicesDetails").then(({ data }) => {
   // console.log(data[0].title_a);
   data.forEach(({ title, description, title_a, description_a }) => {
-    console.log({ title_a, description_a });
     if (currentLanguage == "en") createServiceDetails(title, description);
     else createServiceDetails(title_a, description_a);
   });

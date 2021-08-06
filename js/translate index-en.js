@@ -6,11 +6,10 @@
 
 i18next.init({
   lng: currentLanguage, // if you're using a language detector, do not define the lng option
-  debug: true,
+
   resources: {
     en: {
       translation: {
-     
         head1: "Mission",
         paramission:
           "Our mission is to deliver for our customers the best quality of construction services at competitive rates with highest level of professionalism and integrity resulting in long term relationships with our employees, customers, suppliers and subcontractors.",
@@ -26,7 +25,6 @@ i18next.init({
     },
     ar: {
       translation: {
-      
         head1: "مهمتنا",
         paramission:
           "مهمتنا هي أن نقدم لعملائنا أفضل جودة لخدمات البناء بأسعار تنافسية مع أعلى مستوى من الاحتراف والنزاهة مما يؤدي إلى علاقات طويلة الأمد مع موظفينا وعملائنا وموردينا ومقاولينا من الباطن.",
