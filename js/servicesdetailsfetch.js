@@ -73,7 +73,7 @@ function addTitle(title) {
 }
 function addDescription(description) {
   const projectdescriptionn = document.getElementById("ServiceDescription");
-  projectdescriptionn.innerText = description;
+  projectdescriptionn.innerHTML = description;
 }
 
 function addImages(images) {
