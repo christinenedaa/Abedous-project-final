@@ -1,22 +1,14 @@
 //-----------------Fetch data-------------------------//
-// const axios = require("axios");
 const { axios } = window;
 
 const baseURL = `http://192.168.43.157:8000`;
 axios.defaults.baseURL = `${baseURL}/api`;
 
 axios.get(`projects/`).then(({ data }) => {
-  data.forEach(
-    ({
-      //TODO: delete .splice(0,10)
-      id,
-      title,
-      images,
-    }) => {
-      const image = `${baseURL}/storage/${images[0]}`;
-      addProjectToProjectPage(id, image, title, title);
-    }
-  );
+  data.forEach(({ id, title, images }) => {
+    const image = `${baseURL}/storage/${images[0]}`;
+    addProjectToProjectPage(id, image, title, title);
+  });
 });
 
 function addProjectToProjectPage(id, img, title, shortDescription) {
