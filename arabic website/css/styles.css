@@ -1,34 +1,3 @@
-/* Description: Master CSS file */
-
-/*****************************************
-Table Of Contents:
-- General Styles
-- Navigation
-- Header
-- Introduction
-- Details
-- Services 1
-- Services 2
-- Services 3
-- Projects
-- Testimonials
-- Contact
-- Footer
-- Copyright
-- Back To Top Button
-- Extra Pages
-- Media Queries
-******************************************/
-
-/*****************************************
-Colors:
-- Backgrounds - light gray #f7f9fd
-- Headings text - black #161223
-- Body text - dark gray #53575a
-- Buttons, icons - green #2b7cc2
-******************************************/
-
-
 /**************************/
 /*     General Styles     */
 /**************************/
@@ -1203,8 +1172,6 @@ a:hover {
 	}
 
 	.navbar.top-nav-collapse {
-		/* padding-top: 0.5rem;
-		padding-bottom: 0.5rem; */
 		background-color: #64b1bf94;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
 	}
