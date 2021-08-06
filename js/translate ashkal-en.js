@@ -3,31 +3,23 @@
 
 i18next.init({
   // lng: 'ar', // if you're using a language detector, do not define the lng option
-  debug: true,
+
   resources: {
     en: {
-
       translation: {
-      
-        'servicehead':"Services"
+        servicehead: "Services",
 
         // About Us Page
-        
-    
-
-      }
+      },
     },
     ar: {
       translation: {
-        'servicehead':"خدماتنا"
-      }
-    }
-  }
+        servicehead: "خدماتنا",
+      },
+    },
+  },
 });
 // initialized and ready to go!
 // i18next is already initialized, because the translation resources where passed via init function
 
-
-document.querySelector("#servicehead").innerHTML = i18next.t('servicehead');
-
-
+document.querySelector("#servicehead").innerHTML = i18next.t("servicehead");
