@@ -64,7 +64,12 @@ function addServiceToServicesPage(id, img, title) {
 }
 
 axios.get("http://192.168.43.157:8000/api/servicesDetails").then(({ data }) => {
-  data.forEach((servicedata) => createServiceDetails(servicedata));
+  // console.log(data[0].title_a);
+  data.forEach(({ title, description, title_a, description_a }) => {
+    console.log({ title_a, description_a });
+    if (currentLanguage == "en") createServiceDetails(title, description);
+    else createServiceDetails(title_a, description_a);
+  });
 });
 // const servicedata = {
 //   id: 1,
@@ -73,7 +78,7 @@ axios.get("http://192.168.43.157:8000/api/servicesDetails").then(({ data }) => {
 //     " we have a firm focus on providing quality air conditioning and heating solutions for our clients. It’s what they deserve, and it’s why we’re in business. Keeping people cool in the summer and warm in the winter is our No. 1 priority.",
 // };
 
-function createServiceDetails(servicedata) {
+function createServiceDetails(title, description) {
   const textcontainer = document.createElement("div");
   textcontainer.classList.add("text-container");
   textcontainer.setAttribute(
@@ -83,11 +88,11 @@ function createServiceDetails(servicedata) {
 
   const h2texttitle = document.createElement("h2");
   h2texttitle.classList.add("animate__animated", "animate__bounce");
-  h2texttitle.innerText = servicedata.title;
+  h2texttitle.innerText = title;
 
   const ptext = document.createElement("p");
   ptext.setAttribute("style", "width: 42%; font-size:22px; padding-top: 10px;");
-  ptext.innerText = servicedata.description;
+  ptext.innerText = description;
 
   textcontainer.appendChild(h2texttitle);
   textcontainer.appendChild(ptext);
