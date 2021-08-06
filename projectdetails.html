@@ -295,7 +295,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-10 offset-xl-1">
-            <h1 class="animate__animated animate__bounce">Projects</h1>
+            <h1 id="projecthead" class="animate__animated animate__bounce">Projects</h1>
           </div>
           <!-- end of col -->
         </div>
@@ -386,79 +386,60 @@
     <!-- end of projects details-->
     <br />
 
-    <!-- Footer -->
-    <div class="footer">
+     <!-- Footer -->
+     <div class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="footer-col first">
-              <h6>About Abedous</h6>
-              <p class="p-small">
-                2 Al Nuaimia - Ajman - United Arab Emirates.
-              </p>
-              <p class="p-small">+971-67312884</p>
-              <p class="p-small">info@abedous.com</p>
-            </div>
-            <!-- end of footer-col -->
-            <div class="footer-col second">
-              <h6>Links</h6>
-              <ul class="list-unstyled li-space-lg p-small">
-                <!-- <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li> -->
-                <!-- <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li> -->
-                <li>
-                  Menu: <a href="index.html">Home</a>,
-                  <a href="projects.html">Projects</a>,
-                  <a href="Services.html">Services</a>,
-                  <a href="aboutus.html">About</a>,
-                  <a href="contactus.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <!-- end of footer-col -->
-            <div class="footer-col third">
-              <span class="fa-stack">
-                <a href="https://www.facebook.com/Abedous.Gp/">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x"></i>
-                </a>
-              </span>
-              <span class="fa-stack">
-                <a
-                  href="https://www.instagram.com/abedous.group/?utm_medium=copy_link"
-                >
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-instagram fa-stack-1x"></i>
-                </a>
-              </span>
-              <p class="p-small">We would love to hear from you</p>
-            </div>
-            <!-- end of footer-col -->
-          </div>
-          <!-- end of col -->
-        </div>
-        <!-- end of row -->
-      </div>
-      <!-- end of container -->
-    </div>
-    <!-- end of footer -->
-    <!-- end of footer -->
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="footer-col first">
+                      <h6 id="footabout">About Abedous</h6>
+                      <p id="adress" class="p-small">2 Al Nuaimia - Ajman - United Arab Emirates.</p>
+                      <p class="p-small">+971-67312884</p>
+                      <p class="p-small">info@abedous.com</p>
+                  </div> <!-- end of footer-col -->
+                  <div class="footer-col second">
+                      <h6 id="linkat">Links</h6>
+                      <ul class="list-unstyled li-space-lg p-small" style="padding: 0%;">
+                        
+                          <li id="footer-li"><a href="index.html">Home</a> <br> <a href="projects.html">Projects</a> <br> <a
+                                  href="Services.html">Services</a> <br> <a href="aboutus.html">About</a> <br> <a
+                                  href="contactus.html">Contact</a>
+                              <br></li>
+                      </ul>
+                  </div> <!-- end of footer-col -->
+                  <div class="footer-col third">
+                      <span class="fa-stack">
+                          <a href="https://www.facebook.com/Abedous.Gp/">
+                              <i class="fas fa-circle fa-stack-2x"></i>
+                              <i class="fab fa-facebook-f fa-stack-1x"></i>
+                          </a>
+                      </span>
+                      <span class="fa-stack">
+                          <a href="https://www.instagram.com/abedous.group/?utm_medium=copy_link">
+                              <i class="fas fa-circle fa-stack-2x"></i>
+                              <i class="fab fa-instagram fa-stack-1x"></i>
+                          </a>
+                      </span>
+                      <p id="pageend" class="p-small">We would love to hear from you</p>
+                  </div> <!-- end of footer-col -->
+              </div> <!-- end of col -->
+          </div> <!-- end of row -->
+      </div> <!-- end of container -->
+  </div> <!-- end of footer -->
+  <!-- end of footer -->
 
-    <!-- Copyright -->
-    <div class="copyright">
+
+  <!-- Copyright -->
+  <div class="copyright">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <p class="p-small">Copyright © <a href="#your-link">WebWhy</a></p>
-          </div>
-          <!-- end of col -->
-        </div>
-        <!-- enf of row -->
-      </div>
-      <!-- end of container -->
-    </div>
-    <!-- end of copyright -->
-    <!-- end of copyright -->
-
+          <div class="row">
+              <div class="col-lg-12">
+                  <p class="p-small">Copyright © <a href="#your-link">WebWhy</a></p>
+              </div> <!-- end of col -->
+          </div> <!-- enf of row -->
+      </div> <!-- end of container -->
+  </div> <!-- end of copyright -->
+  <!-- end of copyright -->
     <!-- Back To Top Button -->
     <button onclick="topFunction()" id="myBtn">
       <img src="images/up-arrow.png" alt="alternative" />
@@ -479,5 +460,11 @@
     <script src="js/scripts.js"></script>
     <!-- Custom scripts -->
     <script src="js/projectdetailsfetch.js"></script>
+    
+    <script src="https://unpkg.com/i18next@20.3.5/dist/umd/i18next.js"></script> <!-- translation script -->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script> <!-- translation script -->
+    <script src="js/translate header and footer-en.js"></script> <!-- Custom scripts -->
+    <script src="js/translate project detail-en.js"></script> <!-- Custom scripts -->
+
   </body>
 </html>
