@@ -72,10 +72,11 @@ function addServiceToServicesPage(
 
         wrapDiv.appendChild(servicesdetailsLink);
 }
+
 const servicedata = {
     serviceid: 1,
-    servicetitle: "اداره المرافق",
-    servicedescription: "اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق اداره المرافق",
+    servicetitle: " Management",
+    servicedescription: " we have a firm focus on providing quality air conditioning and heating solutions for our clients. It’s what they deserve, and it’s why we’re in business. Keeping people cool in the summer and warm in the winter is our No. 1 priority.",
 }
 
 const textcontainer = document.createElement("div");
