@@ -2,9 +2,10 @@ const { i18next } = window;
 
 // i18next.languages = ["ar", "en"];
 // console.log(i18next);
+const currentLanguage = localStorage.getItem("lang");
 
 i18next.init({
-  lng: "ar", // if you're using a language detector, do not define the lng option
+  lng: currentLanguage, // if you're using a language detector, do not define the lng option
   debug: true,
   resources: {
     en: {
@@ -37,7 +38,6 @@ i18next.init({
     ar: {
       translation: {
         // Header
-
         home: "الصفحة الرئيسية",
         about: "معلومات عنا",
         services: "خدماتنا",
