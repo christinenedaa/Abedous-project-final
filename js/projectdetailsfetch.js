@@ -14,7 +14,8 @@ axios
     addDescription(description);
     addShortDescription(short_description);
     addImages(images);
-  });
+  })
+  .then(() => handlePopupImages());
 
 function addTitle(title) {
   const projectTitleH1 = document.getElementById("projectTitle");
@@ -32,15 +33,13 @@ function addShortDescription(shortDescription) {
 }
 
 function addImages(images) {
-  console.log(images);
   images.forEach((img) => {
     const image = `${baseURL}/storage/${img}`;
-    console.log(image);
-    addImagea(image);
+    addImage(image);
   });
 }
 
-function addImagea(img) {
+function addImage(img) {
   // bgeb data bta3t l title
 
   // bgeb data bta3t l images gallery
@@ -60,29 +59,71 @@ function addImagea(img) {
 
   const ImageContainerDiv = document.querySelector(".IMGcontainer");
   ImageContainerDiv.appendChild(ImagesHolder);
+
+  const imagetag = document.createElement("img");
+  imagetag.setAttribute("src", img);
+  imagetag.setAttribute("alt", "Popup Image");
+  imagetag.setAttribute("style", "width:60%");
+
+  // console.log(imagetag);
+  const divclose = document.createElement("div");
+  divclose.classList.add("close-btn");
+
+  imagetag.appendChild(divclose);
+
+  const divclosebar = document.createElement("div");
+  divclosebar.classList.add("bar");
+
+  const divclosebar2 = document.createElement("div");
+  divclosebar2.classList.add("bar");
+
+  divclose.appendChild(divclosebar);
+  divclose.appendChild(divclosebar2);
+
+  // const Imagepopup = document.querySelector(".img-popup");
+  // Imagepopup.appendChild(imagetag);
 }
 
-// const imagetag = document.createElement("img");
-// imagetag.setAttribute("src", data.images);
-// imagetag.setAttribute("alt", "Popup Image");
-// imagetag.setAttribute("style", "width:60%");
+function handlePopupImages() {
+  $(document).ready(function () {
+    // required elements
+    var imgPopup = $(".img-popup");
+    var imgCont = $(".container__img-holder");
+    var popupImage = $(".img-popup img");
+    var closeBtn = $(".close-btn");
 
-// const divclose = document.createElement("div");
-// divclose.classList.add("close-btn");
+    // handle events
+    imgCont.on("click", function () {
+      const Imagepopup = document.querySelector(".img-popup");
+      const imageNode = $(this)[0];
 
-// imagetag.appendChild(divclose);
+      const clonedImage = imageNode.childNodes[0].cloneNode(true);
+      clonedImage.setAttribute("id", "popUpClonedImage");
+      Imagepopup.appendChild(clonedImage);
 
-// const divclosebar = document.createElement("div");
-// divclosebar.classList.add("bar");
+      var img_src = $(this).children("img").attr("src");
 
-// const divclosebar2 = document.createElement("div");
-// divclosebar2.classList.add("bar");
+      imgPopup.children("img").attr("src", img_src);
+      imgPopup.addClass("opened");
+    });
 
-// divclose.appendChild(divclosebar);
-// divclose.appendChild(divclosebar2);
+    $(imgPopup, closeBtn).on("click", function () {
+      imgPopup.removeClass("opened");
 
-// const Imagepopup = document.querySelector(".img-popup");
-// Imagepopup.appendChild(imagetag);
+      const ImagepopupContainer = document.querySelector(
+        ".container__img-holder"
+      );
+      const clonedImagepopup = document.querySelector("#popUpClonedImage");
+
+      clonedImagepopup.parentNode.removeChild(clonedImagepopup);
+      imgPopup.children("img").attr("src", "");
+    });
+
+    popupImage.on("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+}
 
 // {
 //     "id": 1,
