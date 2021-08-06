@@ -28,37 +28,61 @@
 //-----------------Fetch data-------------------------//
 // const axios = require("axios");
 const { axios } = window;
-axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
+const baseURL = `http://localhost:8000`;
+axios.defaults.baseURL = `${baseURL}/api`;
 
-const images = Array.from({ length: 8 }).map(
-  () => "https://loremflickr.com/640/360"
-);
+// const images = Array.from({ length: 8 }).map(
+//   () => "https://loremflickr.com/640/360"
+// );
 
-const data = {
-  id: 1,
-  title: "Service 1",
-  short_description: "short Desc",
-  description: "desc",
-  images: images,
-};
+// const data = {
+//   id: 1,
+//   title: "Service 1",
+//   short_description: "short Desc",
+//   description: "desc",
+//   images: images,
+// };
 
-console.log(data);
+// console.log(data);
 
-// bgeb data bta3t l title
-const ServiceTitleH1 = document.getElementById("ServiceTitle");
-ServiceTitleH1.innerText = data.title;
+const id = window.location.hash.substring(1);
 
-data.images.forEach((img) => {
-  console.log("img");
-  console.log(img);
-  addProjectToProjectPage(img);
-});
+axios
+  .get(`/services/${id}`)
+  .then(({ data: { title, description, images } }) => {
+    // console.log(`${b aseURL}/storage/${data.images[0]}`);
+    addTitle(title);
+    addDescription(description);
+    addImages(images);
 
-// bgib data bta3t l description
-const projectdescriptionn = document.getElementById("ServiceDescription");
-projectdescriptionn.innerText = data.description;
+    // data.forEach(({ id, images, title }) => {
+    //   // const image = `${baseURL}/storage/${images[0]}`;
+    //   console.log(title);
+    // });
+  })
+  .then(() => handleSlider(jQuery));
 
-// background-image:url(images/alhayra9.jpg); width: 100%; height: 100%;
+function addTitle(title) {
+  const ServiceTitleH1 = document.getElementById("ServiceTitle");
+  ServiceTitleH1.innerText = title;
+}
+function addDescription(description) {
+  const projectdescriptionn = document.getElementById("ServiceDescription");
+  projectdescriptionn.innerText = description;
+}
+
+function addImages(images) {
+  images.forEach((img) => {
+    const image = `${baseURL}/storage/${img}`;
+    addImage(image);
+  });
+}
+
+function addImage(image) {
+  addProjectToProjectPage(image);
+}
+
+// // background-image:url(images/alhayra9.jpg); width: 100%; height: 100%;
 
 function addProjectToProjectPage(img) {
   const SliderImages = document.createElement("div");
@@ -71,7 +95,7 @@ function addProjectToProjectPage(img) {
   ImageSliderrDiv.insertBefore(SliderImages, ImageSliderrDiv.firstChild);
 }
 
-(function ($) {
+function handleSlider($) {
   "use strict";
 
   $.fn.sliderResponsive = function (settings) {
@@ -191,32 +215,32 @@ function addProjectToProjectPage(img) {
 
     return $slider;
   };
-})(jQuery);
 
-//////////////////////////////////////////////
-// Activate each slider - change options
-//////////////////////////////////////////////
-$(document).ready(function () {
-  $("#slider1").sliderResponsive({
-    // Using default everything
-    // slidePause: 5000,
-    // fadeSpeed: 800,
-    // autoPlay: "on",
-    // showArrows: "off",
-    // hideDots: "off",
-    // hoverZoom: "on",
-    // titleBarTop: "off"
-  });
+  //////////////////////////////////////////////
+  // Activate each slider - change options
+  //////////////////////////////////////////////
+  $(document).ready(function () {
+    $("#slider1").sliderResponsive({
+      // Using default everything
+      // slidePause: 5000,
+      // fadeSpeed: 800,
+      // autoPlay: "on",
+      // showArrows: "off",
+      // hideDots: "off",
+      // hoverZoom: "on",
+      // titleBarTop: "off"
+    });
 
-  $("#slider2").sliderResponsive({
-    fadeSpeed: 300,
-    autoPlay: "off",
-    showArrows: "on",
-    hideDots: "on",
-  });
+    $("#slider2").sliderResponsive({
+      fadeSpeed: 300,
+      autoPlay: "off",
+      showArrows: "on",
+      hideDots: "on",
+    });
 
-  $("#slider3").sliderResponsive({
-    hoverZoom: "off",
-    hideDots: "on",
+    $("#slider3").sliderResponsive({
+      hoverZoom: "off",
+      hideDots: "on",
+    });
   });
-});
+}

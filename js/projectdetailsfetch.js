@@ -1,20 +1,88 @@
 //-----------------Fetch data-------------------------//
 // const axios = require("axios");
 const { axios } = window;
-axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
 
+const baseURL = `http://localhost:8000`;
+axios.defaults.baseURL = `${baseURL}/api`;
 
-// axios.get(`/photos/`)
-//     .then(({ data }) => {
-//         data.splice(0,1) .forEach(({ //TODO: delete splice(0,10)
-//             id,
-//             title,
-//             thumbnailUrl,        
-//         }) => {
-//             addProjectToProjectPage(id,thumbnailUrl,title);
-//         })
-//     })
+const id = window.location.hash.substring(1);
 
+axios
+  .get(`/projects/${id}`)
+  .then(({ data: { title, description, short_description, images } }) => {
+    addTitle(title);
+    addDescription(description);
+    addShortDescription(short_description);
+    addImages(images);
+  });
+
+function addTitle(title) {
+  const projectTitleH1 = document.getElementById("projectTitle");
+  projectTitleH1.innerText = title;
+}
+
+function addDescription(description) {
+  const projectdescriptionn = document.querySelector("#projectDescription");
+  projectdescriptionn.innerText = description;
+}
+
+function addShortDescription(shortDescription) {
+  const projectlocation = document.querySelector("#projectLocation");
+  projectlocation.innerText = shortDescription;
+}
+
+function addImages(images) {
+  console.log(images);
+  images.forEach((img) => {
+    const image = `${baseURL}/storage/${img}`;
+    console.log(image);
+    addImagea(image);
+  });
+}
+
+function addImagea(img) {
+  // bgeb data bta3t l title
+
+  // bgeb data bta3t l images gallery
+  // const imageGallery = document.querySelector(".IMGcontainer");
+  // const IMGGallery = document.getElementById("projectTitle");
+  // IMGGallery.innerText = thumbnailUrl;
+  // imageGallery.appendChild(IMGGallery);
+
+  const ImagesHolder = document.createElement("div");
+  ImagesHolder.classList.add("container__img-holder");
+
+  const projectImages = document.createElement("img");
+  ImagesHolder.classList.add("border_radius_size");
+  projectImages.setAttribute("src", img);
+
+  ImagesHolder.appendChild(projectImages);
+
+  const ImageContainerDiv = document.querySelector(".IMGcontainer");
+  ImageContainerDiv.appendChild(ImagesHolder);
+}
+
+// const imagetag = document.createElement("img");
+// imagetag.setAttribute("src", data.images);
+// imagetag.setAttribute("alt", "Popup Image");
+// imagetag.setAttribute("style", "width:60%");
+
+// const divclose = document.createElement("div");
+// divclose.classList.add("close-btn");
+
+// imagetag.appendChild(divclose);
+
+// const divclosebar = document.createElement("div");
+// divclosebar.classList.add("bar");
+
+// const divclosebar2 = document.createElement("div");
+// divclosebar2.classList.add("bar");
+
+// divclose.appendChild(divclosebar);
+// divclose.appendChild(divclosebar2);
+
+// const Imagepopup = document.querySelector(".img-popup");
+// Imagepopup.appendChild(imagetag);
 
 // {
 //     "id": 1,
@@ -29,87 +97,17 @@ axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
 //     ]
 // }
 
+// const images = Array.from({length:20}).map(()=>("https://loremflickr.com/640/360"))
 
-const images = Array.from({length:20}).map(()=>("https://loremflickr.com/640/360"))
+// const data = {
+//     id: 1,
+//     title: "Project 1",
+//     short_description: "short Desc",
+//     description: "desc",
+//     images:images,
+// }
 
-const data = {
-    id: 1,
-    title: "Project 1",
-    short_description: "short Desc",
-    description: "desc",
-    images:images,
-}
-
-console.log(data)
-
-// data .forEach(({ //TODO: delete splice(0,10)
-//                 id,
-//                 title,
-//                 thumbnailUrl,        
-//             }) => {
-//                 addProjectToProjectPage(id,thumbnailUrl,title);
-//             })
-
-
-const projectTitleH1 = document.getElementById("projectTitle");
-projectTitleH1.innerText = data.title;
-
-data.images.forEach(img=>{
-    console.log("img")
-    addProjectToProjectPage(img)
-})
-
-// bgib data bta3t l description
-	const projectdescriptionn = document.querySelector("#projectDescription");
-	projectdescriptionn.innerText = data.description;
-
-// bgib data bta3t l location "short description"
-	const projectlocation = document.querySelector("#projectLocation");
-	projectlocation.innerText = data.short_description;
-
-function addProjectToProjectPage(
-        img,
-    ){
-    // bgeb data bta3t l title 
-
-	// bgeb data bta3t l images gallery 
-	// const imageGallery = document.querySelector(".IMGcontainer");
-	// const IMGGallery = document.getElementById("projectTitle");
-	// IMGGallery.innerText = thumbnailUrl;
-	// imageGallery.appendChild(IMGGallery);
-
-        const ImagesHolder = document.createElement("div");
-        ImagesHolder.classList.add("container__img-holder");
-        
-        const projectImages = document.createElement("img");
-		ImagesHolder.classList.add("border_radius_size");
-        projectImages.setAttribute("src",img);
-        
-        ImagesHolder.appendChild(projectImages);
-
-        const ImageContainerDiv = document.querySelector(".IMGcontainer");
-        ImageContainerDiv.appendChild(ImagesHolder);
-
-}
-
-const imagetag = document.createElement("img");
-imagetag.setAttribute("src",data.images);
-imagetag.setAttribute("alt","Popup Image");
-imagetag.setAttribute("style","width:60%")
-
-const divclose = document.createElement("div");
-divclose.classList.add("close-btn");
-
-imagetag.appendChild(divclose);
-
-const divclosebar = document.createElement("div");
-divclosebar.classList.add("bar");
-
-const divclosebar2 = document.createElement("div");
-divclosebar2.classList.add("bar");
-
-divclose.appendChild(divclosebar);
-divclose.appendChild(divclosebar2);
-
-const Imagepopup = document.querySelector(".img-popup");
-Imagepopup.appendChild(imagetag);
+// data.images.forEach(img=>{
+//     console.log("img")
+//     addProjectToProjectPage(img)
+// })
