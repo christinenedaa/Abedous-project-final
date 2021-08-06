@@ -28,6 +28,12 @@ i18next.init({
         'aaamm':"Why Trusting Abedous Company?",
         'paragraph1about':"Abedous General Contracting has attained its reputation as one of the reliable and diversified contracting firms in Ajman-UAE. Since 2006 Abedous General Contracting LLC has provided its clients with viable solutions to any complexities in their construction needs. The company’s strength lies in traditional construction methods re-enforced by creative, fresh approaches to cutting edge technologies and delivery systems. Abedous Co. has assembled a team of construction professionals that offer a single source solution for all construction related needs. Abedous Co. LLC supports its clients in every aspect from project inception to commission of the fully operational facility.",
 
+        'paragraph2about':"Abedous provides services when you need it, where you need it, by timely and by qualified and experienced technical staff. Our qualified, experienced and dedicated technicians are always ready to assist our customers in all their requirements. We strive to fulfill and exceed our customer expectations with quality, reliability and on time services.",
+        'abouthead2':"Abedous Specialization",
+
+        'service1':"Building Contracting",
+        'service2':"Facilities Management Division",
+        'service3':"Interiors Division",
 
 
 
@@ -78,11 +84,11 @@ document.querySelectorAll(".nav-link")[3].innerHTML = i18next.t('projects');
 document.querySelectorAll(".nav-link")[4].innerHTML = i18next.t('contacts');
 document.querySelectorAll(".nav-link")[5].innerHTML = i18next.t('language');
 
-document.querySelectorAll("a")[10].innerHTML = i18next.t('home');
-document.querySelectorAll("a")[11].innerHTML = i18next.t('about');
-document.querySelectorAll("a")[12].innerHTML = i18next.t('services');
-document.querySelectorAll("a")[13].innerHTML = i18next.t('projects');
-document.querySelectorAll("a")[14].innerHTML = i18next.t('contacts');
+document.querySelectorAll("#footer-li>a")[0].innerHTML = i18next.t('home');
+document.querySelectorAll("#footer-li>a")[1].innerHTML = i18next.t('about');
+document.querySelectorAll("#footer-li>a")[2].innerHTML = i18next.t('services');
+document.querySelectorAll("#footer-li>a")[3].innerHTML = i18next.t('projects');
+document.querySelectorAll("#footer-li>a")[4].innerHTML = i18next.t('contacts');
 document.querySelector("#linkat").innerHTML = i18next.t('linkat');
 document.querySelector("#adress").innerHTML = i18next.t('adress');
 document.querySelector("#footabout").innerHTML = i18next.t('footabout');

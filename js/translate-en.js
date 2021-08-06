@@ -31,8 +31,7 @@ i18next.init({
 
         // About Us Page
         
-        'abouthead1':"About Us",
-
+       
 
 
 
@@ -58,9 +57,7 @@ i18next.init({
         'paravision':"تلتزم شركة أبيدوس المحدودة ببناء علاقات طويلة الأمد مبنية على النزاهة في الأداء والقيمة ورضا العملاء. سنستمر في تلبية الاحتياجات المتغيرة لعملائنا من خلال خدماتنا عالية الجودة التي يقدمها أكثر الأشخاص المؤهلين. تتمثل رؤيتنا في أن يتم الاعتراف بها واحترامها كواحدة من الشركات الرائدة في إدارة المرافق الشاملة في الإمارات العربية المتحدة.",
         'head3':"لماذا شركة أبيدوس للمقاولات؟",
         'parahead1':"نحن ندرك أن لعملائنا الاختيار عند اختيار شركة إنشاءات. في شركة أبيدوس ، نسعى جاهدين لتجاوز التوقعات وتحقيق أقصى قدر من القيمة. التزام شركة أبيدوس هو لمصلحتك.",
-        'abouthead1':"معلومات عنا",
-
-
+        
 
 
 
@@ -78,12 +75,12 @@ document.querySelectorAll(".nav-link")[3].innerHTML = i18next.t('projects');
 document.querySelectorAll(".nav-link")[4].innerHTML = i18next.t('contacts');
 document.querySelectorAll(".nav-link")[5].innerHTML = i18next.t('language');
 
-document.querySelectorAll("a")[10].innerHTML = i18next.t('home');
-document.querySelectorAll("a")[11].innerHTML = i18next.t('about');
-document.querySelectorAll("a")[12].innerHTML = i18next.t('services');
-document.querySelectorAll("a")[13].innerHTML = i18next.t('projects');
-document.querySelectorAll("a")[14].innerHTML = i18next.t('contacts');
-document.querySelector("#links").innerHTML = i18next.t('linkat');
+document.querySelectorAll("#footer-li>a")[0].innerHTML = i18next.t('home');
+document.querySelectorAll("#footer-li>a")[1].innerHTML = i18next.t('about');
+document.querySelectorAll("#footer-li>a")[2].innerHTML = i18next.t('services');
+document.querySelectorAll("#footer-li>a")[3].innerHTML = i18next.t('projects');
+document.querySelectorAll("#footer-li>a")[4].innerHTML = i18next.t('contacts');
+document.querySelector("#linkat").innerHTML = i18next.t('linkat');
 document.querySelector("#adress").innerHTML = i18next.t('adress');
 document.querySelector("#footabout").innerHTML = i18next.t('footabout');
 document.querySelector("#pageend").innerHTML = i18next.t('pageend');
