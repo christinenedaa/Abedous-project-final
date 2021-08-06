@@ -9,7 +9,7 @@ i18next.init({
 
       translation: {
       
-        'projecthead':"Projects"
+        'servicehead':"Services"
 
         // About Us Page
         
@@ -19,7 +19,7 @@ i18next.init({
     },
     ar: {
       translation: {
-        'projecthead':"مشاريعنا"
+        'servicehead':"خدماتنا"
       }
     }
   }
@@ -28,6 +28,6 @@ i18next.init({
 // i18next is already initialized, because the translation resources where passed via init function
 
 
-document.querySelector("#projecthead").innerHTML = i18next.t('projecthead');
+document.querySelector("#servicehead").innerHTML = i18next.t('servicehead');
 
 
