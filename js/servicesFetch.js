@@ -3,7 +3,7 @@
 const { axios } = window;
 // url = "https://653a8c1416cf.ngrok.io";
 // axios.defaults.baseURL = `${url}/api`;
-const baseURL = `http://localhost:8000`;
+const baseURL = `http://192.168.43.157:8000`;
 axios.defaults.baseURL = `${baseURL}/api`;
 
 // axios.get(`/services/`)
@@ -62,7 +62,7 @@ function addServiceToServicesPage(id, img, title) {
   wrapDiv.appendChild(servicesdetailsLink);
 }
 
-axios.get("http://localhost:8000/api/servicesDetails").then(({ data }) => {
+axios.get("http://192.168.43.157:8000/api/servicesDetails").then(({ data }) => {
   data.forEach((servicedata) => createServiceDetails(servicedata));
 });
 // const servicedata = {

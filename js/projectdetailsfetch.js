@@ -2,7 +2,7 @@
 // const axios = require("axios");
 const { axios } = window;
 
-const baseURL = `http://localhost:8000`;
+const baseURL = `http://192.168.43.157:8000`;
 axios.defaults.baseURL = `${baseURL}/api`;
 
 const id = window.location.hash.substring(1);
