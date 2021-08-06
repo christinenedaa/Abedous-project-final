@@ -20,9 +20,10 @@ axios.defaults.baseURL = `${baseURL}/api`;
 //     })
 
 axios.get(`/services`).then(({ data }) => {
-  data.forEach(({ id, title, images }) => {
+  data.forEach(({ id, title, title_a, images }) => {
     const image = `${baseURL}/storage/${images[0]}`;
-    addServiceToServicesPage(id, image, title);
+    if (currentLanguage == "en") addServiceToServicesPage(id, image, title);
+    else addServiceToServicesPage(id, image, title_a);
   });
 });
 

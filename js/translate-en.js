@@ -2,7 +2,6 @@ const { i18next } = window;
 
 // i18next.languages = ["ar", "en"];
 // console.log(i18next);
-const currentLanguage = localStorage.getItem("lang");
 
 i18next.init({
   lng: currentLanguage, // if you're using a language detector, do not define the lng option

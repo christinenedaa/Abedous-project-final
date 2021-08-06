@@ -49,10 +49,15 @@ const id = window.location.hash.substring(1);
 
 axios
   .get(`/services/${id}`)
-  .then(({ data: { title, description, images } }) => {
+  .then(({ data: { title, description, title_a, description_a, images } }) => {
     // console.log(`${b aseURL}/storage/${data.images[0]}`);
-    addTitle(title);
-    addDescription(description);
+    if (currentLanguage == "en") {
+      addTitle(title);
+      addDescription(description);
+    } else {
+      addTitle(title_a);
+      addDescription(description_a);
+    }
     addImages(images);
 
     // data.forEach(({ id, images, title }) => {

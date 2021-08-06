@@ -15,7 +15,6 @@ axios.get(`projects/`).then(({ data }) => {
       images,
     }) => {
       const image = `${baseURL}/storage/${images[0]}`;
-      const currentLanguage = localStorage.getItem("lang");
       if (currentLanguage == "en")
         addProjectToProjectPage(id, image, title, short_description);
       else addProjectToProjectPage(id, image, title_a, short_description_a);
