@@ -26,7 +26,7 @@ i18next.init({
         namecontact: "Name",
         emailcontact: "Email",
         messagecontact: "Please write your message",
-
+        buttonsubmit: "Send Message",
         // About Us Page
       },
     },
@@ -50,6 +50,7 @@ i18next.init({
         namecontact: "الاسم",
         emailcontact: "البريد الالكتروني",
         messagecontact: "تفضل بكتابة ما ترغب به",
+        buttonsubmit: "إرسال",
 
         // Footer
       },
@@ -77,14 +78,9 @@ i18next.init({
 document.querySelector("#head1contact").innerHTML = i18next.t("head1contact");
 document.querySelector("#headingline").innerHTML = i18next.t("headingline");
 document.querySelectorAll("#contactinfo>li")[0].innerHTML = i18next.t("adress");
-document.querySelectorAll("#contactinfo>li")[1].innerHTML = i18next.t("tele");
+document.querySelector("#numbercontact").innerHTML = i18next.t("tele");
 
-document
-  .querySelector("#namecontact")
-  .setAttribute("placeholder", i18next.t("namecontact"));
-document
-  .querySelector("#emailcontact")
-  .setAttribute("placeholder", i18next.t("emailcontact"));
-document
-  .querySelector("#messagecontact")
-  .setAttribute("placeholder", i18next.t("messagecontact"));
+document.querySelector("#namecontact").setAttribute("placeholder", i18next.t("namecontact"));
+document.querySelector("#emailcontact").setAttribute("placeholder", i18next.t("emailcontact"));
+document.querySelector("#messagecontact").setAttribute("placeholder", i18next.t("messagecontact"));
+document.querySelector("#buttonsubmit").innerText = i18next.t("buttonsubmit")
